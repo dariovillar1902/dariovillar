@@ -1,3 +1,8 @@
+<?php
+  print_r($_POST);
+mail("dario_villar2001@hotmail.com", "asunto", "cuerpo", "from: pagina@hola.com");
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -392,26 +397,26 @@ h4 {
         <div class='row'>
             <div class='col-md-1'></div>
             <div class='col-md-10 container-fluid'>
-            <form action="https://formsubmit.co/dario_villar2001@hotmail.com" method="POST">
+            <form method='POST'>
               <h1 class="h3 mb-3 fw-normal"> Enviar un mensaje </h1>
               <div class='row'>
                 <div class='col-md-3 mx-auto'>
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name='Nombre'>
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
                     <label for="floatingInput">Nombre</label>
                   </div>
                 </div>
                 <div class='col-md-1'></div>
                 <div class='col-md-3 mx-auto'>
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput2" placeholder="Asunto" name='Asunto'>
+                    <input type="text" class="form-control" id="floatingInput2" placeholder="Asunto">
                     <label for="floatingInput2">Asunto</label>
                   </div>
                 </div>
                 <div class='col-md-1'></div>
                 <div class='col-md-3 mx-auto'>
                   <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput3" placeholder="Mail" name='Mail'>
+                    <input type="email" class="form-control" id="floatingInput3" placeholder="Mail">
                     <label for="floatingInput3">Mail</label>
                   </div>
                 </div>
@@ -419,14 +424,14 @@ h4 {
               <div class='row'>
                 <div class='col-md-10 mx-auto'>
                   <div class="form-floating">
-                    <textarea class="form-control" id="floatingInput4" placeholder="Mensaje" name='Mensaje'></textarea>
+                    <textarea class="form-control" id="floatingInput4" placeholder="Mensaje"></textarea>
                     <label for="floatingInput4">Mensaje</label>
                   </div>
                 </div>
                 <div class='row' id='filaEnvio'>
                   <div class='col-md-1'></div>
                   <div class='col-md-10 mx-auto divBoton'>
-                    <button class="verMas" id='botonMail'> Enviar </button>
+                    <button class="verMas"> Enviar </button>
                   </div>
                   <div class='col-md-1'></div>
               </div>
@@ -440,8 +445,6 @@ h4 {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
-
-
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
