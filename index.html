@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="favicon.png">
+    <link rel="mask-icon" href="favicon.png" color="#0D0106">
+    <link rel="icon" href="favicon.png">
+    <meta name="theme-color" content="#0D0106">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inicio - Darío Villar </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,900;1,900&family=IBM+Plex+Serif&family=Source+Serif+Pro&family=Roboto+Slab:wght@400;700&family=Noto+Serif:wght@400,700&family=Lora:wght@700&family=Montserrat:ital,wght@0,500;0,900;1,900&family=Public+Sans:ital,wght@0,900;1,900&family=Roboto:ital,wght@0,900;1,900&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.37.4/tsparticles.min.js"></script>
+    <style type='text/css'>
+
+        
+
+    .foto {
+        width: 70%;
+    }
+
+    .filaarriba {
+       display: flex;
+       vertical-align: middle;
+       flex-direction: column;
+       justify-content: center;
+       padding-top: 50px;
+    }
+
+    .infocontacto {
+        margin: 10px 0;
+    }
+
+    .linkscontacto {
+        margin: 10px 10px 10px 0;
+        float: right;
+        text-align: right;
+    }
+
+    .divfoto {
+        margin: auto;
+        text-align: center;
+        background-color: #188B5D;
+        padding-top: 50px;
+    }
+
+    .infoadicional {
+        text-align: center;
+        background-color: #188B5D;
+        color: #FBFBFF;
+    }
+
+    h1 {
+        margin: 20px auto;
+        
+    }
+
+    h5 {
+        margin: 10px auto;
+    }
+
+    .tituloadicional {
+        margin: 80px 0 20px 0;
+    }
+
+    .filaabajo {
+        margin-bottom: 50px;
+    }
+
+    nav {
+        background-color: #0D0106 !important;
+        border-bottom: 2px solid #FBFBFF;
+    }
+
+    .nav-link {
+        color: #FBFBFF !important;
+    }
+
+    .nav-link:hover {
+        color: #FF331F !important;
+    }
+
+    .navbar-brand {
+        padding-left: 1em;
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end;
+        padding: 0px 1em;
+    }
+
+    body {
+        background-color: #0D0106;
+        color: #FBFBFF;
+        margin: 0;
+    }
+
+    #tsparticles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    canvas {
+        display: block;
+        position: relative !important;
+        z-index: -1 !important;
+    }
+
+    .gradienteTexto {
+        background: linear-gradient(90deg, #388697, #5948D5);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 60px;
+        z-index: 2;
+        font-weight: bolder;
+        text-align: center;
+        width: 6em;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 60%;
+        left: 50%;
+    }
+
+    .foto {
+        z-index: 2;
+        width: 12em;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 50%;
+        border-radius: 50%;
+    }
+
+    .linksContacto {
+        background: linear-gradient(90deg, #388697, #5948D5);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        z-index: 2;
+        font-weight: bolder;
+        text-align: center;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 70%;
+
+    }
+
+    @media (max-width: 1024px) {
+        #linkedin {
+            left: 43%;
+        }
+
+        #github {
+            left: 57%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        #linkedin {
+            left: 47%;
+        }
+
+        #github {
+            left: 53%;
+        }
+    }
+
+    .otroTexto {
+        background: linear-gradient(90deg, #388697, #5948D5);
+        color: white;
+        font-family: 'Helvetica Neue', sans-serif;
+        z-index: 2;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px 0;
+        width: 15em;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 80%;
+        left: 50%;
+        border-radius: 10px;
+    }
+
+
+    h1 {
+        background: linear-gradient(90deg, #388697, #5948D5);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    h3 {
+        color: #FF331F;
+    }
+
+    .verMas {
+        background-color: #FF331F;
+        color: white;
+        font-weight: bold;
+        font-family: 'Helvetica Neue', sans-serif;
+        border-radius: 15px;
+        padding: 5px 10px;
+    }
+
+    .progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+  margin: 20px 0;
+}
+
+.progress-value {
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+#progress1 {
+    animation: load1 3s normal forwards;
+}
+
+#progress2 {
+    animation: load2 3s normal forwards;
+}
+
+@keyframes load1 {
+  0% { width: 0; }
+  100% { width: 30.43%; }
+}
+
+@keyframes load2 {
+  0% { width: 0; }
+  100% { width: 33%; }
+}
+
+#sobreMi {
+    position: absolute;
+}
+
+.logo {
+    height: 2em;
+}
+
+.fs-4 {
+    vertical-align: middle;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="home.html"> 
+            <img src='favicon.png' class='logo'>
+            <span class="fs-4">
+                Darío Villar
+            </span> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="home.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobremi.html">Sobre mi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    <div class='container-fluid'>
+        <div class='row filaRelleno'>
+            <div id="tsparticles"></div>
+            <div id="elementosArriba">
+                <img src='foto.jpeg' class='foto'>
+                <p class='gradienteTexto'> Darío Villar </p>
+                <p class='otroTexto'> Estudiante de Ingeniería Civil Full-Stack Web Developer</p>
+                <a class="linksContacto" id="linkedin" href="https://www.linkedin.com/in/dario-villar"><i class='fab fa-linkedin'></i></a>
+                <a class="linksContacto" id="github" href="https://github.com/dariovillar1902"><i class='fab fa-github'></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        tsParticles.load("tsparticles", 
+            {"autoPlay":true,
+            "background":{
+                "color":{
+                    "value":"#0D0106"},
+                    "image":"",
+                    "position":"50% 50%",
+                    "repeat":"no-repeat",
+                    "size":"cover",
+                    "opacity":1},
+                    "backgroundMask":{
+                        "composite":"destination-out",
+                        "cover":{
+                            "color":{
+                                "value":"#fff"},
+                                "opacity":1},
+                                "enable":false},
+                                "fullScreen":{"enable":true,
+                        "zIndex":1},
+                        "detectRetina":true,
+                        "duration":0,
+                        "fpsLimit":60,
+                        "interactivity":{"detectsOn":"window",
+                        "events":{"onClick":{"enable":true,
+                        "mode":"push"},
+                        "onDiv":{"selectors":[],
+                        "enable":false,
+                        "mode":[],
+                        "type":"circle"},
+                        "onHover":{"enable":false,
+                        "mode":"repulse",
+                        "parallax":{"enable":true,
+                        "force":60,
+                        "smooth":10}},
+                        "resize":true},
+                        "modes":{"attract":{"distance":200,
+                        "duration":0.4,
+                        "easing":"ease-out-quad",
+                        "factor":1,
+                        "maxSpeed":50,
+                        "speed":1},
+                        "bounce":{"distance":200},
+                        "bubble":{"distance":400,
+                        "duration":2,
+                        "mix":false,
+                        "opacity":0.8,
+                        "size":40},
+                        "connect":{"distance":80,
+                        "links":{"opacity":0.5},
+                        "radius":60},
+                        "grab":{"distance":400,
+                        "links":{"blink":false,
+                        "consent":false,
+                        "opacity":1}},
+                        "light":{"area":{"gradient":{"start":{"value":"#ffffff"},
+                        "stop":{"value":"#000000"}},
+                        "radius":1000},
+                        "shadow":{"color":{"value":"#000000"},
+                        "length":2000}},
+                        "push":{"default":true,
+                        "groups":[],
+                        "quantity":4},
+                        "remove":{"quantity":2},
+                        "repulse":{"distance":200,
+                        "duration":0.4,
+                        "factor":100,
+                        "speed":1,
+                        "maxSpeed":50,
+                        "easing":"ease-out-quad"},
+                        "slow":{"factor":3,
+                        "radius":200},
+                        "trail":{"delay":1,
+                        "pauseOnStop":false,
+                        "quantity":1}}},
+                        "manualParticles":[],
+                        "motion":{"disable":false,
+                        "reduce":{"factor":4,
+                        "value":true}},
+                        "particles":{"bounce":{"horizontal":{"random":{"enable":false,
+                        "minimumValue":0.1},
+                        "value":1},
+                        "vertical":{"random":{"enable":false,
+                        "minimumValue":0.1},
+                        "value":1}},
+                        "collisions":{"bounce":{"horizontal":{"random":{"enable":false,
+                        "minimumValue":0.1},
+                        "value":1},
+                        "vertical":{"random":{"enable":false,
+                        "minimumValue":0.1},
+                        "value":1}},
+                        "enable":true,
+                        "mode":"bounce",
+                        "overlap":{"enable":true,
+                        "retries":0}},
+                        "color":{"value":"#ffffff",
+                        "animation":{"h":{"count":0,
+                        "enable":false,
+                        "offset":0,
+                        "speed":1,
+                        "sync":true},
+                        "s":{"count":0,
+                        "enable":false,
+                        "offset":0,
+                        "speed":1,
+                        "sync":true},
+                        "l":{"count":0,
+                        "enable":false,
+                        "offset":0,
+                        "speed":1,
+                        "sync":true}}},
+                        "destroy":{"mode":"none",
+                        "split":{"count":1,
+                        "factor":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":3},
+                        "rate":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":{"min":4,
+                        "max":9}},
+                        "sizeOffset":true}},
+                        "gradient":[],
+                        "groups":{},
+                        "life":{"count":0.001,
+                        "delay":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":0,
+                        "sync":false},
+                        "duration":{"random":{"enable":false,
+                        "minimumValue":0.0001},
+                        "value":0,
+                        "sync":false}},
+                        "links":{"blink":false,
+                        "color":{"value":"#ffffff"},
+                        "consent":false,
+                        "distance":150,
+                        "enable":false,
+                        "frequency":1,
+                        "opacity":0.4,
+                        "shadow":{"blur":5,
+                        "color":{"value":"#00ff00"},
+                        "enable":false},
+                        "triangles":{"enable":false,
+                        "frequency":1},
+                        "width":1,
+                        "warp":false},
+                        "move":{"angle":{"offset":0,
+                        "value":90},
+                        "attract":{"distance":200,
+                        "enable":false,
+                        "rotate":{"x":600,
+                        "y":1200}},
+                        "decay":0,
+                        "distance":{},
+                        "direction":"none",
+                        "drift":0,
+                        "enable":true,
+                        "gravity":{"acceleration":9.81,
+                        "enable":false,
+                        "inverse":false,
+                        "maxSpeed":50},
+                        "path":{"clamp":true,
+                        "delay":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":0},
+                        "enable":false,
+                        "options":{}},
+                        "outModes":{"default":"bounce",
+                        "bottom":"bounce",
+                        "left":"bounce",
+                        "right":"bounce",
+                        "top":"bounce"},
+                        "random":false,
+                        "size":false,
+                        "speed":2,
+                        "spin":{"acceleration":0,
+                        "enable":false},
+                        "straight":false,
+                        "trail":{"enable":false,
+                        "length":10,
+                        "fillColor":{"value":"#000000"}},
+                        "vibrate":false,
+                        "warp":false},
+                        "number":{"density":{"enable":true,
+                        "area":800,
+                        "factor":1000},
+                        "limit":0,
+                        "value":40},
+                        "opacity":{"random":{"enable":false,
+                        "minimumValue":0.1},
+                        "value":0.5,
+                        "animation":{"count":0,
+                        "enable":false,
+                        "speed":1,
+                        "sync":false,
+                        "destroy":"none",
+                        "startValue":"random",
+                        "minimumValue":0.1}},
+                        "orbit":{"animation":{"count":0,
+                        "enable":false,
+                        "speed":1,
+                        "sync":false},
+                        "enable":false,
+                        "opacity":1,
+                        "rotation":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":45},
+                        "width":1},
+                        "reduceDuplicates":true,
+                        "repulse":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":0,
+                        "enabled":false,
+                        "distance":1,
+                        "duration":1,
+                        "factor":1,
+                        "speed":1},
+                        "roll":{"darken":{"enable":false,
+                        "value":0},
+                        "enable":false,
+                        "enlighten":{"enable":false,
+                        "value":0},
+                        "mode":"vertical",
+                        "speed":25},
+                        "rotate":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":0,
+                        "animation":{"enable":false,
+                        "speed":0,
+                        "sync":false},
+                        "direction":"clockwise",
+                        "path":false},
+                        "shadow":{"blur":0,
+                        "color":{"value":"#000000"},
+                        "enable":false,
+                        "offset":{"x":0,
+                        "y":0}},
+                        "shape":{"options":{},
+                        "type":"circle"},
+                        "size":{"random":{"enable":true,
+                        "minimumValue":10},
+                        "value":{"min":10,
+                        "max":15},
+                        "animation":{"count":0,
+                        "enable":false,
+                        "speed":40,
+                        "sync":false,
+                        "destroy":"none",
+                        "startValue":"random",
+                        "minimumValue":0.1}},
+                        "stroke":{"width":0},
+                        "tilt":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":0,
+                        "animation":{"enable":false,
+                        "speed":0,
+                        "sync":false},
+                        "direction":"clockwise",
+                        "enable":false},
+                        "twinkle":{"lines":{"enable":false,
+                        "frequency":0.05,
+                        "opacity":1},
+                        "particles":{"enable":false,
+                        "frequency":0.05,
+                        "opacity":1}},
+                        "wobble":{"distance":5,
+                        "enable":false,
+                        "speed":50},
+                        "zIndex":{"random":{"enable":false,
+                        "minimumValue":0},
+                        "value":0,
+                        "opacityRate":1,
+                        "sizeRate":1,
+                        "velocityRate":1}},
+                        "pauseOnBlur":true,
+                        "pauseOnOutsideViewport":true,
+                        "responsive":[],
+                        "themes":[],
+                        "zLayers":100});    
+                
+    </script>
+    
+</body>
+</html>
