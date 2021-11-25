@@ -22,10 +22,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,900;1,900&family=IBM+Plex+Serif&family=Source+Serif+Pro&family=Roboto+Slab:wght@400;700&family=Noto+Serif:wght@400,700&family=Lora:wght@700&family=Montserrat:ital,wght@0,500;0,900;1,900&family=Public+Sans:ital,wght@0,900;1,900&family=Roboto:ital,wght@0,900;1,900&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.37.4/tsparticles.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.37.4/tsparticles.min.js"></script>
     <style type='text/css'>
 
+    .foto {
+        width: 70%;
+    }
+
+    .filaarriba {
+       display: flex;
+       vertical-align: middle;
+       flex-direction: column;
+       justify-content: center;
+       padding-top: 50px;
+    }
+
+    .infocontacto {
+        margin: 10px 0;
+    }
+
+    .linkscontacto {
+        margin: 10px 10px 10px 0;
+        float: right;
+        text-align: right;
+    }
+
+    .divfoto {
+        margin: auto;
+        text-align: center;
+        background-color: #188B5D;
+        padding-top: 50px;
+    }
+
+    .infoadicional {
+        text-align: center;
+        background-color: #188B5D;
+        color: #FBFBFF;
+    }
+
+    h5 {
+        margin: 10px auto;
+    }
+
+    .tituloadicional {
+        margin: 80px 0 20px 0;
+    }
+
+    .filaabajo {
+        margin-bottom: 50px;
+    }
     nav {
         background-color: #0D0106 !important;
         border-bottom: 2px solid #FBFBFF;
@@ -129,12 +175,6 @@
         }
     }
 
-    @media (min-width: 1400px) {
-        .vistaPrevia {
-            height: 200px;
-        }
-    }
-
     .otroTexto {
         background: linear-gradient(90deg, #388697, #5948D5);
         color: white;
@@ -158,11 +198,22 @@
         -webkit-background-clip: text;
         color: transparent;
         font-weight: bold;
+        width: 6em;
         margin-bottom: 20px;
     }
 
     h3 {
         color: #FF331F;
+    }
+
+    .verMas {
+        background-color: #FF331F;
+        color: white !important;
+        font-weight: bold;
+        font-family: 'Helvetica Neue', sans-serif;
+        border-radius: 15px;
+        padding: 10px 20px;
+        margin: 0 20px;
     }
 
     .progress {
@@ -176,6 +227,7 @@
   height: 40px;
   width: 300px;
   margin: 40px auto;
+  font-size: 30px;
 }
 
 .progress-value {
@@ -187,11 +239,11 @@
 }
 
 #progress1 {
-    animation: load1 5s normal forwards;
+    animation: load1 10s normal forwards;
 }
 
 #progress2 {
-    animation: load2 5s normal forwards;
+    animation: load2 10s normal forwards;
 }
 
 @keyframes load1 {
@@ -201,7 +253,7 @@
 
 @keyframes load2 {
   0% { width: 0; }
-  100% { width: 33%; }
+  100% { width: 58.70%; }
 }
 
 .fotoSobreMi {
@@ -225,43 +277,12 @@
     align-items: center;
 }
 
-.vistaPrevia {
-    width: 100%;
-    border-radius: 10px;
+.linksUtiles {
+    color: #FBFBFF;
 }
 
-.modal-title {
-        background: linear-gradient(90deg, #388697, #5948D5);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        font-weight: bold;
-    }
-
-.modal-body {
-    color: #0D0106;
-}
-
-.modal-dialog {
-    max-width: 90% !important;
-}
-
-.screenshotModal {
-    width: 100%;
-}
-
-.carousel, h4 {
-    margin-bottom: 20px;
-}
-
-h4 {
-    text-align: center;
-    font-weight: bold;
-}
-
-.fas, .fab {
+.linksUtiles:hover {
     color: #FF331F;
-    margin: 0 10px;
 }
 
 .logo {
@@ -272,66 +293,11 @@ h4 {
     vertical-align: middle;
 }
 
-#fila1Portfolio, #filaEnvio {
-    margin-top: 0 !important;
-}
-
-    .verMas {
-        background-color: #FF331F;
-        color: white;
-        font-weight: bold;
-        font-family: 'Helvetica Neue', sans-serif;
-        border-radius: 15px;
-        padding: 10px 20px;
-        margin: 10px auto !important;
-    }
-
-    .containerImagen {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 600px;
-    }
-
-    #filaArchivos {
-      margin-top: 0 !important;
-      height: auto;
-    }
-
-    .divArchivo {
-      align-items: flex-start;
-      text-align: center;
-    }
-
-    label {
-      color: #0D0106;
-    }
-
-    textarea {
-      height: 200px !important;
-    }
-
-    .form-control {
-      margin-bottom: 20px;
-    }
-
-    .divBoton {
-      text-align: center;
-    }
-
-    .verMasLink {
+.verMasLink {
     color: #FBFBFF !important;
     text-decoration: none;
     
 }
-
     </style>
 </head>
 <body>
@@ -343,8 +309,8 @@ h4 {
             </span> 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <span class="navbar-toggler-icon"></span>
+          </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-0">
@@ -364,106 +330,22 @@ h4 {
         </div>
       </nav>
       <div class='container-fluid'>
-        <div class='row'>
-          <div class='col-md-1'></div>
-          <div class='col-md-10'>
-            <h1> Contacto </h1>
-          </div>
-          <div class='col-md-1'></div>
-        </div>
-        <div class='row' id='filaArchivos'>
+        <div class='row' id='sobreMi'>
             <div class='col-md-1'></div>
-            <div class='col-md-5 divArchivo'>
-                <h4> Curriculum Vitae </h4>
-                <iframe src='cv.pdf'> </iframe>
-                <button class="verMas"><a href="cv.html" class='verMasLink'> Vista Previa </a></button>
-                <br>
-                <button class="verMas"><a href="cv.pdf" class='verMasLink' download> Descargar </a></button>
-              </div>
-            <div class='col-md-5 divArchivo'>
-              <h4> Carta de presentación </h4>
-              <iframe src='cv.pdf'> </iframe>
-              <button class="verMas"><a href="cv.html" class='verMasLink'> Vista Previa </a></button>
-              <br>
-              <button class="verMas"><a href="cv.pdf" class='verMasLink' download> Descargar </a></button>
+            <div class='col-md-10'>
+                <h1> Gracias </h1>
+                <p class='descripcion'> Gracias por enviarme un mensaje a través de esta página. En breve lo estaré viendo para responder tus inquietudes. </p>
+                <button class="verMas"><a href="contacto.html" class='verMasLink'> Volver </a></button>
             </div>
             <div class='col-md-1'></div>
         </div>
-        <div class='row'>
-            <div class='col-md-1'></div>
-            <div class='col-md-10 container-fluid'>
-            <form action="https://formsubmit.co/1baa31af5cc41afbd1db00ea820f4407" method="POST">
-              <input type="hidden" name="_next" value="https://dariovillar.vercel.app/gracias.html">
-              <h1 class="h3 mb-3 fw-normal"> Enviar un mensaje </h1>
-              <div class='row'>
-                <div class='col-md-3 mx-auto'>
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name='Nombre'>
-                    <label for="floatingInput">Nombre</label>
-                  </div>
-                </div>
-                <div class='col-md-1'></div>
-                <div class='col-md-3 mx-auto'>
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput2" placeholder="Asunto" name='Asunto'>
-                    <label for="floatingInput2">Asunto</label>
-                  </div>
-                </div>
-                <div class='col-md-1'></div>
-                <div class='col-md-3 mx-auto'>
-                  <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput3" placeholder="Mail" name='Mail'>
-                    <label for="floatingInput3">Mail</label>
-                  </div>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='col-md-10 mx-auto'>
-                  <div class="form-floating">
-                    <textarea class="form-control" id="floatingInput4" placeholder="Mensaje" name='Mensaje'></textarea>
-                    <label for="floatingInput4">Mensaje</label>
-                  </div>
-                </div>
-                <div class='row' id='filaEnvio'>
-                  <div class='col-md-1'></div>
-                  <div class='col-md-10 mx-auto divBoton'>
-                    <button class="verMas" id='botonMail'> Enviar </button>
-                  </div>
-                  <div class='col-md-1'></div>
-              </div>
-              </div>
-            </form>
-            </div>
-            <div class='col-md-1'></div>
-        </div>
-        
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
-
-
         $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip()
         })
 
-        $('.containerImagen').hover(function(){
-            if ($(this).children('img').css('filter') !== 'brightness(0.5)'){
-                $(this).children('img').css('filter', 'brightness(0.5)');
-            } else {
-                $(this).children('img').css('filter', 'brightness(1)');
-            }
-            if ($(this).children('h6').css('visibility') !== 'hidden'){
-                $(this).children('h6').css('visibility', 'hidden');
-            } else {
-                $(this).children('h6').css('visibility', 'visible');
-            }
-            if ($(this).children('button').css('visibility') !== 'hidden'){
-                $(this).children('button').css('visibility', 'hidden');
-            } else {
-                $(this).children('button').css('visibility', 'visible');
-            }
-        });
     </script>
 </body>
 </html>
