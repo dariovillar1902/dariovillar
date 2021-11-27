@@ -273,8 +273,9 @@ h4 {
     vertical-align: middle;
 }
 
-#fila1Portfolio {
+#fila1Portfolio, #fila2Portfolio {
     margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .tituloProyecto {
@@ -367,6 +368,29 @@ h4 {
                             <img src='screenshots/CAH4.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modalHDP">
                             <h6 class="tituloProyecto"> Hasta Donde Puedas online </h6>
                             <button class="verMas" data-bs-toggle="modal" data-bs-target="#modalHDP"> Ver proyecto </button>
+                        </div>
+                    </div>
+                    <div class='col-lg-4'>
+                        <div class='containerImagen'>
+                            <img src='screenshots/100Arg1.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modal100Arg">
+                            <h6 class="tituloProyecto"> 100 Argentinos Dicen </h6>
+                            <button class="verMas" data-bs-toggle="modal" data-bs-target="#modal100Arg"> Ver proyecto </button>
+                        </div>
+                    </div>
+                    <div class='col-lg-4'>
+                        <div class='containerImagen'>
+                            <img src='screenshots/dariovillar1.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modalDarioVillar">
+                            <h6 class="tituloProyecto"> Página Personal - Darío Villar </h6>
+                            <button class="verMas" data-bs-toggle="modal" data-bs-target="#modalDarioVillar"> Ver proyecto </button>
+                        </div>
+                    </div>
+                </div>
+                <div class='row' id='fila2Portfolio'>
+                    <div class='col-lg-4'>
+                        <div class='containerImagen'>
+                            <img src='screenshots/syzygy1.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modalHDP">
+                            <h6 class="tituloProyecto"> Syzygy Consulting Group </h6>
+                            <button class="verMas" data-bs-toggle="modal" data-bs-target="#modalSyzygy"> Ver proyecto </button>
                         </div>
                     </div>
                     <div class='col-lg-4'>
@@ -612,7 +636,64 @@ h4 {
           </div>
         </div>
       </div>
-
+      <div class="modal modal-signin bg-dark py-5 modal-fullscreen" tabindex="-1" role="dialog" id="modalSyzygy">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-5 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+              <h3 class="modal-title"> Syzygy Consulting Group </h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <div class="modal-body p-5 pt-0">
+                <div id="myCarousel4" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#myCarousel4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#myCarousel4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#myCarousel4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#myCarousel4" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src='screenshots/syzygy1.png' class='screenshotModal'>
+                      </div>
+                      <div class="carousel-item">
+                        <img src='screenshots/syzygy2.png' class='screenshotModal'>
+                      </div>
+                      <div class="carousel-item">
+                        <img src='screenshots/syzygy3.png' class='screenshotModal'>
+                      </div>
+                      <div class="carousel-item">
+                        <img src='screenshots/syzygy4.png' class='screenshotModal'>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel4" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel4" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <p><i class="fas fa-calendar"></i> octubre de 2017 <i class="fas fa-clock"></i> 1 mes </p>
+                  <p><i class="fas fa-list"></i> Esta página fue creada para un trabajo práctico de la materia Comercialización, en 4° año de mi colegio secundario. Es una página bastante básica debido a que en ese momento sólo sabía HTML, CSS y JavaScript básico. La página era 100% responsive a través de Bootstrap, por lo que podía ser vista desde cualquier dispositivo.  </p>
+                  <p><i class="fas fa-ellipsis-h"></i><b> Otras funciones:</b> En mi grupo de trabajo de 2 personas, mi compañero se encargó de la confección del logo en distintas variantes (visible en la página de inicio) y yo realicé enteramente el desarrollo de esta página. Tomamos en cuenta todas las correcciones del profesor, aplicándolas como si fuera un cliente y preguntando todo lo que fuera necesario para mejorar nuestra página.
+                  </p>
+                  <p> Lamentablemente, el hosting de esta página fue descontinuado, por lo que no es posible visitarla. Lo que se ve en las fotos es toda la información que fue posible rescatar. Sin embargo, fue mi primer proyecto y aprendí mucho.
+                  </p>
+                  <p><i class="fas fa-rocket"></i><b> Tecnologías utilizadas: </b> </p>
+                  <h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4>
+                  
+                    <form method="get" action="contacto.html">
+                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                            <i class="fas fa-wifi"></i>
+                            Volver
+                        </button>
+                    </form>
+            </div>
+          </div>
+        </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
         $(function () {
