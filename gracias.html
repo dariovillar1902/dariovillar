@@ -73,12 +73,7 @@
         margin-bottom: 50px;
     }
     nav {
-        background-color: #0D0106 !important;
-        border-bottom: 2px solid #FBFBFF;
-    }
-
-    .nav-link {
-        color: #FBFBFF !important;
+        background-color: #0D0106;
     }
 
     .nav-link:hover {
@@ -298,35 +293,75 @@
     text-decoration: none;
     
 }
+
+* {
+  box-sizing: border-box; }
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer; }
+  input[type="checkbox"]:focus {
+    outline: 0; }
+
+.toggle {
+  height: 32px;
+  width: 52px;
+  border-radius: 16px;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  border: 2px solid #474755;
+  background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
+  transition: all .2s ease; }
+  .toggle:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+    transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35); }
+  .toggle:checked {
+    border-color: #654FEC; }
+    .toggle:checked:after {
+      transform: translatex(20px); }
+
     </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+<body class="objetoOscuro">
+    <nav class="navbar navbar-expand-lg navbar-dark objetoOscuro">
         <a class="navbar-brand" href="home.html"> 
             <img src='favicon.png' class='logo'>
-            <span class="fs-4">
+            <span class="fs-4 textoClaro">
                 Darío Villar
             </span> 
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler objetoOscuro" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon textoClaro"></span>
           </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-0">
             <li class="nav-item active">
-              <a class="nav-link" href="home.html">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link textoClaro" href="home.html">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobremi.html">Sobre mi</a>
+              <a class="nav-link textoClaro " href="sobremi.html">Sobre mi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                <a class="nav-link textoClaro" href="portfolio.html">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
+                <a class="nav-link textoClaro" href="contacto.html">Contacto</a>
               </li>
           </ul>
+          <input type="checkbox" class="toggle" checked>
         </div>
       </nav>
       <div class='container-fluid'>
@@ -334,7 +369,7 @@
             <div class='col-md-1'></div>
             <div class='col-md-10'>
                 <h1> Gracias </h1>
-                <p class='descripcion'> Gracias por enviarme un mensaje a través de esta página. En breve lo estaré viendo para responder tus inquietudes. </p>
+                <p class='descripcion textoClaro'> Gracias por enviarme un mensaje a través de esta página. En breve lo estaré viendo para responder tus inquietudes. </p>
                 <button class="verMas"><a href="contacto.html" class='verMasLink'> Volver </a></button>
             </div>
             <div class='col-md-1'></div>
@@ -342,10 +377,41 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
+
+let modoOscuro = true;
+
+if (modoOscuro){
+  $(".textoClaro").css("color", "#FBFBFF !important");
+  $("nav").css("borderBottom", "2px solid #FBFBFF");
+} else {
+  $(".textoClaro").css("color", "#0D0106 !important");
+  $("nav").css("borderBottom, 2px solid #0D0106");
+}
         $(function () {
         $('[data-toggle="tooltip"]').tooltip()
         })
 
+
+        $('.toggle').click(function(){
+          console.log("Toggle activado");
+          if (modoOscuro){
+            console.log("Cambio a modo claro");
+            modoOscuro = false;
+            $(".objetoOscuro").css("backgroundColor", "#FBFBFF !important");
+            $(".textoClaro").css("color", "#0D0106 !important");
+            $("nav").css("borderBottom", "2px solid #0D0106");
+            $("nav").removeClass("navbar-dark");
+            $("nav").addClass("navbar-light");
+          } else {
+            console.log("Cambio a modo oscuro");
+            modoOscuro = true;
+            $(".objetoOscuro").css("backgroundColor", "#0D0106 !important");
+            $(".textoClaro").css("color", "#FBFBFF !important");
+            $("nav").css("borderBottom", "2px solid #FBFBFF");
+            $("nav").removeClass("navbar-light");
+            $("nav").addClass("navbar-dark");
+          }
+        });
     </script>
 </body>
 </html>
