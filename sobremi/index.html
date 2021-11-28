@@ -333,6 +333,17 @@ input[type="checkbox"] {
     .toggle:checked:after {
       transform: translatex(20px); }
 
+      .banderaEsp {
+        margin: auto 10px;
+        cursor: pointer;
+    }
+
+    .banderaEng {
+        margin: auto 10px;
+        display: none;
+        cursor: pointer;
+    }
+
     </style>
 </head>
 <body class="objetoOscuro">
@@ -350,35 +361,37 @@ input[type="checkbox"] {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-0">
             <li class="nav-item active">
-              <a class="nav-link textoClaro" href="/">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link textoClaro" id="tabInicio" href="/">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link textoClaro " href="sobremi">Sobre mi</a>
+              <a class="nav-link textoClaro " id="tabSobreMi" href="sobremi">Sobre mi</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link textoClaro" href="portfolio">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link textoClaro" href="contacto">Contacto</a>
+                <a class="nav-link textoClaro" id="tabContacto" href="contacto">Contacto</a>
               </li>
           </ul>
-          <input type="checkbox" class="toggle" checked>
+          <input type="checkbox" class="toggle navbar-nav" checked>
+          <img src='esp.png' class='banderaEsp logo navbar-nav'>
+          <img src='eng.png' class='banderaEng logo navbar-nav'>
         </div>
       </nav>
       <div class='container-fluid'>
         <div class='row' id='sobreMi'>
             <div class='col-md-1'></div>
             <div class='col-md-10'>
-                <h1> Sobre Mi </h1>
-                <p class='descripcion textoClaro'> Soy Darío Villar, vivo en Buenos Aires, Argentina. Soy estudiante de 3° año de Ingeniería Civil en la UTN FRBA y desarrollador web full-stack. Mis objetivos son adquirir experiencia en el ámbito laboral de la programación web full-stack, agregando valor a un equipo que me permita potenciar lo aprendido en los múltiples cursos y certificaciones online que realicé. Producir un impacto positivo en la experiencia del usuario y agregar valor al producto final. En el futuro, me gustaría combinar mi experiencia en desarrollo web full-stack con el ámbito de la Ingeniería Civil y la industria de la construcción. </p>
+                <h1 id='tituloSobreMi'> Sobre Mi </h1>
+                <p class='descripcion textoClaro' id='descripcionSobreMi'> Soy Darío Villar, vivo en Buenos Aires, Argentina. Soy estudiante de 3° año de Ingeniería Civil en la UTN FRBA y desarrollador web full-stack. Mis objetivos son adquirir experiencia en el ámbito laboral de la programación web full-stack, agregando valor a un equipo que me permita potenciar lo aprendido en los múltiples cursos y certificaciones online que realicé. Producir un impacto positivo en la experiencia del usuario y agregar valor al producto final. En el futuro, me gustaría combinar mi experiencia en desarrollo web full-stack con el ámbito de la Ingeniería Civil y la industria de la construcción. </p>
             </div>
             <div class='col-md-1'></div>
         </div>
         <div class='row' id='descripcionIngenieria'>
             <div class='col-md-1'></div>
             <div class='col-md-5'>
-                <h2 class="textoClaro"> Ingeniería Civil </h2>
-                <p class='descripcion textoClaro'> Estoy en la mitad de la carrera, en el tercer nivel de un <a class="linksUtiles textoClaro" href="https://frba.utn.edu.ar/wp-content/uploads/2019/01/Correlativas-Plan-95-Adecuado-2019.pdf">plan de 6 niveles</a>. En el futuro, planeo seguir la orientación de Vías de Comunicación y dedicarme a la Ingeniería en Transporte. Asisto a clases en la <a class="linksUtiles textoClaro" href="https://www.frba.utn.edu.ar/">Universidad Tecnológica Nacional, Facultad Regional Buenos Aires.</a> Entré a la facultad en 2019, por lo que solamente tuve un año de cursada presencial y dos virtuales. Aprendí mucho sobre los distintos ámbitos de la Ingeniería, incluyendo ciencias básicas, cálculo y análisis de estructuras, tecnologías y técnicas relacionadas con materiales y construcción. Además, la facultad me preparó mucho para el trabajo en grupo, así como para la confección de documentación de obra a través de <a class="linksUtiles textoClaro" href="https://latinoamerica.autodesk.com/products/autocad/overview">AutoCAD</a>, planillas Excel, <a class="linksUtiles textoClaro" href="https://www.mathcad.com/en/">Mathcad</a>, <a class="linksUtiles textoClaro" href="https://www.bentley.com/es/products/product-line/structural-analysis-software/ram-elements">RAM Elements</a>, entre otros programas. </p>
+                <h2 class="textoClaro" id='tituloIngenieria'> Ingeniería Civil </h2>
+                <p class='descripcion textoClaro' id='descripcionIng'> Estoy en la mitad de la carrera, en el tercer nivel de un <a class="linksUtiles textoClaro" href="https://frba.utn.edu.ar/wp-content/uploads/2019/01/Correlativas-Plan-95-Adecuado-2019.pdf">plan de 6 niveles</a>. En el futuro, planeo seguir la orientación de Vías de Comunicación y dedicarme a la Ingeniería en Transporte. Asisto a clases en la <a class="linksUtiles textoClaro" href="https://www.frba.utn.edu.ar/">Universidad Tecnológica Nacional, Facultad Regional Buenos Aires.</a> Entré a la facultad en 2019, por lo que solamente tuve un año de cursada presencial y dos virtuales. Aprendí mucho sobre los distintos ámbitos de la Ingeniería, incluyendo ciencias básicas, cálculo y análisis de estructuras, tecnologías y técnicas relacionadas con materiales y construcción. Además, la facultad me preparó mucho para el trabajo en grupo, así como para la confección de documentación de obra a través de <a class="linksUtiles textoClaro" href="https://latinoamerica.autodesk.com/products/autocad/overview">AutoCAD</a>, planillas Excel, <a class="linksUtiles textoClaro" href="https://www.mathcad.com/en/">Mathcad</a>, <a class="linksUtiles textoClaro" href="https://www.bentley.com/es/products/product-line/structural-analysis-software/ram-elements">RAM Elements</a>, entre otros programas. </p>
             </div>
             <div class='col-md-5 divFoto'>
                <img src='fotoconst.jpg' class="fotoSobreMi animate__animated animate__bounceIn">
@@ -389,19 +402,19 @@ input[type="checkbox"] {
         <div class='row' id='detalleIngenieria'>
             <div class='col-md-1'></div>
             <div class='col-md-5'>
-                <h3><span class="number" id="numero1">0</span>° Año </h3>
-                <p class='descripcion textoClaro'> de la carrera </p>
+                <h3><span class="number" id="numero1">0</span>° </h3>
+                <p class='descripcion textoClaro' id="descripcionAgno"> año de la carrera </p>
                 <h3><span class="number" id="numero2">0</span>/46 </h3>
-                <p class='descripcion textoClaro'> materias completadas </p>
+                <p class='descripcion textoClaro' id="descripcionMaterias"> materias completadas </p>
                 <h3><span class="number" id="numero3">0</span>.94 </h3>
-                <p class='descripcion textoClaro'> promedio actual </p>
+                <p class='descripcion textoClaro ' id="descripcionPromedio"> promedio actual </p>
             </div>
             <div class='col-md-5 divProgreso'>
                 <div class="progress" data-toggle="tooltip" data-placement="top" title="14/46 (30,43%)">
                     <div class="progress-value" id="progress1"></div>
                   </div>
-                <button class="verMas"><a href="comprobante.pdf" class='verMasLink'> Ver materias aprobadas </a></button>
-                <button class="verMas"><a href="trabajos.pdf" class='verMasLink'> Ver trabajos realizados </a></button>
+                <button class="verMas"><a href="comprobante.pdf" class='verMasLink' id="botonMateriasAprobadas"> Ver materias aprobadas </a></button>
+                <button class="verMas"><a href="trabajos.pdf" class='verMasLink' id="botonTrabajosRealizados"> Ver trabajos realizados </a></button>
             </div>
             <div class='col-md-1'></div>
         </div>
@@ -411,8 +424,8 @@ input[type="checkbox"] {
         <div class='row' id='descripcionDesarrollo'>
             <div class='col-md-1'></div>
             <div class='col-md-5'>
-                <h2 class="textoClaro"> Desarrollo Web Full-Stack </h2>
-                <p class='descripcion textoClaro'> Siempre me interesó la programación, y en particular el desarrollo web. Desde los 15 años hice cursos en forma completamente autodidacta y desarrollé múltiples sitios web para proyectos personales, para amigos y conocidos e incluso para trabajos del secundario y de la facultad. Aprendí lenguajes y herramientas de programación como HTML5, CSS3, JavaScript, jQuery, Bootstrap, WordPress, PHP, mySQL, Python, Node, React, .NET, Git/GitHub, entre otras tecnologías. Los cursos son de diversas plataformas, incluyendo la UTN FRBA (a través del programa <a class="linksUtiles textoClaro" href="https://becas.neoris.com">Becas NEORIS</a>), <a class="linksUtiles textoClaro" href="https://www.udemy.com/">Udemy</a>, <a class="linksUtiles textoClaro" href="https://www.linkedin.com/learning/">LinkedIn Learning</a>, <a class="linksUtiles textoClaro" href="https://es.coursera.org/">Coursera</a>, entre otras. Siempre estoy buscando nuevas herramientas y recursos que me puedan ayudar con mis desarrollos, para alcanzar mis objetivos. Ahora estoy aprendiendo más sobre React y Node, ya que JavaScript es uno de mis lenguajes preferidos. En el futuro, mi idea es conseguir un trabajo que me permita adquirir experiencia poniendo en práctica todos los conocimientos de estos cursos y certificaciones.  </p>
+                <h2 class="textoClaro" id="tituloDesarrollo"> Desarrollo Web Full-Stack </h2>
+                <p class='descripcion textoClaro' id="descripcionDes"> Siempre me interesó la programación, y en particular el desarrollo web. Desde los 15 años hice cursos en forma completamente autodidacta y desarrollé múltiples sitios web para proyectos personales, para amigos y conocidos e incluso para trabajos del secundario y de la facultad. Aprendí lenguajes y herramientas de programación como HTML5, CSS3, JavaScript, jQuery, Bootstrap, WordPress, PHP, mySQL, Python, Node, React, .NET, Git/GitHub, entre otras tecnologías. Los cursos son de diversas plataformas, incluyendo la UTN FRBA (a través del programa <a class="linksUtiles textoClaro" href="https://becas.neoris.com">Becas NEORIS</a>), <a class="linksUtiles textoClaro" href="https://www.udemy.com/">Udemy</a>, <a class="linksUtiles textoClaro" href="https://www.linkedin.com/learning/">LinkedIn Learning</a>, <a class="linksUtiles textoClaro" href="https://es.coursera.org/">Coursera</a>, entre otras. Siempre estoy buscando nuevas herramientas y recursos que me puedan ayudar con mis desarrollos, para alcanzar mis objetivos. Ahora estoy aprendiendo más sobre React y Node, ya que JavaScript es uno de mis lenguajes preferidos. En el futuro, mi idea es conseguir un trabajo que me permita adquirir experiencia poniendo en práctica todos los conocimientos de estos cursos y certificaciones.  </p>
             </div>
             <div class='col-md-5 divFoto'>
                <img src='fotodev.jpg' class="fotoSobreMi animate__animated animate__bounceIn">
@@ -424,18 +437,18 @@ input[type="checkbox"] {
             <div class='col-md-1'></div>
             <div class='col-md-5'>
                 <h3><span class="number" id="numero4">0</span>/9 </h3>
-                <p class='descripcion textoClaro'> cursos y certificaciones </p>
+                <p class='descripcion textoClaro' id="descripcionCursos"> cursos y certificaciones </p>
                 <h3><span class="number" id="numero5">0</span>/402 </h3>
-                <p class='descripcion textoClaro'> horas de clase </p>
+                <p class='descripcion textoClaro' id="descripcionHoras"> horas de clase </p>
                 <h3><span class="number" id="numero6">0</span> </h3>
-                <p class='descripcion textoClaro'> proyectos realizados </p>
+                <p class='descripcion textoClaro' id="descripcionProyectos"> proyectos realizados </p>
             </div>
             <div class='col-md-5 divProgreso'>
                 <div class="progress" data-toggle="tooltip" data-placement="top" title="236/402 (58,7%)">
                     <div class="progress-value" id="progress2"></div>
                 </div>
-                <button class="verMas"><a href="certificados.pdf" class='verMasLink'> Ver certificados de cursos </a></button>
-                <button class="verMas"><a href="portfolio.html" class='verMasLink'> Ver mis proyectos </a></button>
+                <button class="verMas"><a href="certificados.pdf" class='verMasLink' id="botonCertificados"> Ver certificados de cursos </a></button>
+                <button class="verMas"><a href="portfolio.html" class='verMasLink' id="botonProyectos"> Ver mis proyectos </a></button>
             </div>
             <div class='col-md-1'></div>
         </div>
@@ -444,6 +457,58 @@ input[type="checkbox"] {
     <script>
 
 let modoOscuro = true;
+
+let idiomaEsEsp = true;
+
+  
+$(".banderaEsp").click(function(){
+            $(".banderaEsp").css("display", "none");
+            $(".banderaEng").css("display", "block");
+            idiomaEsEsp = false;
+            $("#tabInicio").html("Home");
+            $("#tabSobreMi").html("About me");
+            $("#tabContacto").html("Contact");
+            $("#tituloSobreMi").html("About Me");
+            $("#descripcionSobreMi").html("I am Dario Villar, I live in Buenos Aires, Argentina. I am a third-year student of Civil Engineering at the National Technological University in Buenos Aires and a Full-Stack web developer. My goals are to gain experience in the work field of full-stack web development, adding value to a team which allows me to improve what I learned through attending multiple online courses and certifications. Another goal is to make a positive impact in the user experience and to add value to the final product. In the future, I would like to combine my experience in Full-Stack web development with the work field of Civil Engineering and the building industry.");
+            $("#tituloIngenieria").html("Civil Engineering");
+            $("#descripcionIng").html("I am in the third year of my university courses, from a <a class='linksUtiles textoClaro' href='https://frba.utn.edu.ar/wp-content/uploads/2019/01/Correlativas-Plan-95-Adecuado-2019.pdf'>6-year degree</a>. In the future, I plan to follow the Means of Transport profile and work in Transport Engineering. I attend courses at the <a class='linksUtiles textoClaro' href='https://www.frba.utn.edu.ar/'>National Technological University, in Buenos Aires.</a> I started my career in 2019, so I only had a year of in-person courses, and two years online. I learned greatly about different aspects of Engineering, including basic Math and Physics, structural analysis and technologies related to materials and construction. Moreover, my university prepared me to work in a team, as well as to make blueprints and other documents needed for building, through <a class='linksUtiles textoClaro' href='https://latinoamerica.autodesk.com/products/autocad/overview'>AutoCAD</a>, Excel spreadsheets, <a class='linksUtiles textoClaro' href='https://www.mathcad.com/en/'>Mathcad</a>, <a class='linksUtiles textoClaro' href='https://www.bentley.com/es/products/product-line/structural-analysis-software/ram-elements'>RAM Elements</a>, among other programs and applications.");
+            $("#descripcionAgno").html("year of my degree");
+            $("#descripcionMaterias").html("completed subjects");
+            $("#descripcionPromedio").html("current GPA");
+            $("#botonMateriasAprobadas").html("Watch my completed subjects");
+            $("#botonTrabajosRealizados").html("Watch my work");
+            $("#tituloDesarrollo").html("Full-Stack Web Development");
+            $("#descripcionDes").html("I have always been interested in programming and software, particularly in web development. Since I was 15 years old, I took courses in a completely self-taught way, and I developed multiple websites for friends and family, and even for work regarding my high school or my university. I learned programming languages and tools such as HTML5, CSS3, JavaScript, jQuery, Bootstrap, WordPress, PHP, mySQL, Python, Node, React, .NET, Git/GitHub, among other technologies. The courses are from many platforms, including my university, UTN FRBA (through a program of scholarships called <a class='linksUtiles textoClaro' href='https://becas.neoris.com'>Becas NEORIS</a>), <a class='linksUtiles textoClaro' href='https://www.udemy.com/'>Udemy</a>, <a class='linksUtiles textoClaro' href='https://www.linkedin.com/learning/'>LinkedIn Learning</a>, <a class='linksUtiles textoClaro' href='https://es.coursera.org/'>Coursera</a>, among others. I am constantly on the lookout for new tools and resources which could help me with my projects, in order to achieve my goals. Currently, I am learning more about React and Node, since JavaScript is one of my favourite development languages. In the future, my idea is to get a job that allows me to gain experience, putting into practice all the knowledge I acquired in these courses and certifications. ");
+            $("#descripcionCursos").html("courses and certifications");
+            $("#descripcionHoras").html("hours of lessons");
+            $("#descripcionProyectos").html("projects completed");
+            $("#botonCertificados").html("Watch my certificates");
+            $("#botonProyectos").html("Watch my projects");
+    });
+
+    $(".banderaEng").click(function(){
+            $(".banderaEng").css("display", "none");
+            $(".banderaEsp").css("display", "block");
+            idiomaEsEsp = true;
+            $("#tabInicio").html("Inicio");
+            $("#tabSobreMi").html("Sobre mi");
+            $("#tabContacto").html("Contacto");
+            $("#descripcionSobreMi").html("Soy Darío Villar, vivo en Buenos Aires, Argentina. Soy estudiante de 3° año de Ingeniería Civil en la UTN FRBA y desarrollador web full-stack. Mis objetivos son adquirir experiencia en el ámbito laboral de la programación web full-stack, agregando valor a un equipo que me permita potenciar lo aprendido en los múltiples cursos y certificaciones online que realicé. Producir un impacto positivo en la experiencia del usuario y agregar valor al producto final. En el futuro, me gustaría combinar mi experiencia en desarrollo web full-stack con el ámbito de la Ingeniería Civil y la industria de la construcción.");
+            $("#tituloIngenieria").html("Ingeniería Civil");
+            $("#descripcionIng").html("Estoy en la mitad de la carrera, en el tercer nivel de un <a class='linksUtiles textoClaro' href='https://frba.utn.edu.ar/wp-content/uploads/2019/01/Correlativas-Plan-95-Adecuado-2019.pdf'>plan de 6 niveles</a>. En el futuro, planeo seguir la orientación de Vías de Comunicación y dedicarme a la Ingeniería en Transporte. Asisto a clases en la <a class='linksUtiles textoClaro' href='https://www.frba.utn.edu.ar/'>Universidad Tecnológica Nacional, Facultad Regional Buenos Aires.</a> Entré a la facultad en 2019, por lo que solamente tuve un año de cursada presencial y dos virtuales. Aprendí mucho sobre los distintos ámbitos de la Ingeniería, incluyendo ciencias básicas, cálculo y análisis de estructuras, tecnologías y técnicas relacionadas con materiales y construcción. Además, la facultad me preparó mucho para el trabajo en grupo, así como para la confección de documentación de obra a través de <a class='linksUtiles textoClaro' href='https://latinoamerica.autodesk.com/products/autocad/overview'>AutoCAD</a>, planillas Excel, <a class='linksUtiles textoClaro' href='https://www.mathcad.com/en/'>Mathcad</a>, <a class='linksUtiles textoClaro' href='https://www.bentley.com/es/products/product-line/structural-analysis-software/ram-elements'>RAM Elements</a>, entre otros programas.");
+            $("#descripcionAgno").html("año de la carrera");
+            $("#descripcionMaterias").html("materias aprobadas");
+            $("#descripcionPromedio").html("promedio actual");
+            $("#botonMateriasAprobadas").html("Ver materias aprobadas");
+            $("#botonTrabajosRealizados").html("Ver trabajos realizados");
+            $("#tituloDesarrollo").html("Desarrollo Web Full-Stack");
+            $("#descripcionDes").html("Siempre me interesó la programación, y en particular el desarrollo web. Desde los 15 años hice cursos en forma completamente autodidacta y desarrollé múltiples sitios web para proyectos personales, para amigos y conocidos e incluso para trabajos del secundario y de la facultad. Aprendí lenguajes y herramientas de programación como HTML5, CSS3, JavaScript, jQuery, Bootstrap, WordPress, PHP, mySQL, Python, Node, React, .NET, Git/GitHub, entre otras tecnologías. Los cursos son de diversas plataformas, incluyendo la UTN FRBA (a través del programa <a class='linksUtiles textoClaro' href='https://becas.neoris.com'>Becas NEORIS</a>), <a class='linksUtiles textoClaro' href='https://www.udemy.com/'>Udemy</a>, <a class='linksUtiles textoClaro' href='https://www.linkedin.com/learning/'>LinkedIn Learning</a>, <a class='linksUtiles textoClaro' href='https://es.coursera.org/'>Coursera</a>, entre otras. Siempre estoy buscando nuevas herramientas y recursos que me puedan ayudar con mis desarrollos, para alcanzar mis objetivos. Ahora estoy aprendiendo más sobre React y Node, ya que JavaScript es uno de mis lenguajes preferidos. En el futuro, mi idea es conseguir un trabajo que me permita adquirir experiencia poniendo en práctica todos los conocimientos de estos cursos y certificaciones.");
+            $("#descripcionCursos").html("cursos y certificaciones");
+            $("#descripcionHoras").html("horas de clase");
+            $("#descripcionProyectos").html("proyectos realizados");
+            $("#botonCertificados").html("Ver certificados de cursos");
+            $("#botonProyectos").html("Ver mis proyectos");
+    });
 
 if (modoOscuro){
   $(".textoClaro").css("color", "#FBFBFF !important");

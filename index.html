@@ -158,22 +158,6 @@
         #github {
             left: 57%;
         }
-
-        .foto {
-            top: 50%;
-        }
-
-        .gradienteTexto {
-            top: 70%;
-        }
-
-        .linksContacto {
-            top: 80%;
-        }
-
-        .otroTexto {
-            top: 90%;
-        }
     }
 
     @media (min-width: 992px) {
@@ -185,7 +169,10 @@
             left: 53%;
         }
 
-        .foto {
+      
+    }
+
+    .foto {
             top: 40%;
         }
 
@@ -200,7 +187,6 @@
         .otroTexto {
             top: 80%;
         }
-    }
 
     .otroTexto {
         background: linear-gradient(90deg, #388697, #5948D5);
@@ -328,6 +314,17 @@ input[type="checkbox"] {
     .toggle:checked:after {
       transform: translatex(20px); }
 
+    .banderaEsp {
+        margin: auto 10px;
+        cursor: pointer;
+    }
+
+    .banderaEng {
+        margin: auto 10px;
+        display: none;
+        cursor: pointer;
+    }
+
     </style>
 </head>
 <body class="objetoOscuro">
@@ -345,19 +342,21 @@ input[type="checkbox"] {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-0">
             <li class="nav-item active">
-              <a class="nav-link textoClaro" href="/">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link textoClaro" id="tabInicio" href="/">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link textoClaro " href="sobremi">Sobre mi</a>
+              <a class="nav-link textoClaro " id="tabSobreMi" href="sobremi">Sobre mi</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link textoClaro" href="portfolio">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link textoClaro" href="contacto">Contacto</a>
+                <a class="nav-link textoClaro" id="tabContacto" href="contacto">Contacto</a>
               </li>
           </ul>
-          <input type="checkbox" class="toggle" checked>
+          <input type="checkbox" class="toggle navbar-nav" checked>
+          <img src='esp.png' class='banderaEsp logo navbar-nav'>
+          <img src='eng.png' class='banderaEng logo navbar-nav'>
         </div>
       </nav>
     <div class='container-fluid'>
@@ -366,7 +365,7 @@ input[type="checkbox"] {
             <div id="elementosArriba">
                 <img src='foto.jpeg' class='foto'>
                 <p class='gradienteTexto'> Darío Villar </p>
-                <p class='otroTexto'> Estudiante de Ingeniería Civil Full-Stack Web Developer</p>
+                <p class='otroTexto'> Estudiante de Ingeniería Civil Desarrollador Web Full-Stack</p>
                 <a class="linksContacto" id="linkedin" href="https://www.linkedin.com/in/dario-villar"><i class='fab fa-linkedin'></i></a>
                 <a class="linksContacto" id="github" href="https://github.com/dariovillar1902"><i class='fab fa-github'></i></a>
             </div>
@@ -380,6 +379,8 @@ input[type="checkbox"] {
     <script>
 
 let modoOscuro = true;
+let menuAbierto = false;
+let idiomaEsEsp = true;
 
 if (modoOscuro){
   $(".textoClaro").css("color", "#FBFBFF !important");
@@ -668,7 +669,42 @@ if (modoOscuro){
   
 }
   
-                
+    $(".banderaEsp").click(function(){
+            $(".banderaEsp").css("display", "none");
+            $(".banderaEng").css("display", "block");
+            idiomaEsEsp = false;
+            $("#tabInicio").html("Home");
+            $("#tabSobreMi").html("About me");
+            $("#tabContacto").html("Contact");
+            $(".otroTexto").html("Civil Engineering student <br> Full-Stack Web Developer");
+    });
+
+    $(".banderaEng").click(function(){
+            $(".banderaEng").css("display", "none");
+            $(".banderaEsp").css("display", "block");
+            idiomaEsEsp = true;
+            $("#tabInicio").html("Inicio");
+            $("#tabSobreMi").html("Sobre mi");
+            $("#tabContacto").html("Contacto");
+            $(".otroTexto").html("Estudiante de Ingeniería Civil Desarrollador Web Full-Stack");
+    });
+
+    $(".navbar-toggler").click(function(){
+        if (menuAbierto){
+            $(".foto").css("transform", "translate(-50%, -50%)");
+            $(".gradienteTexto").css("transform", "translate(-50%, -50%)");
+            $(".linksContacto").css("transform", "translate(-50%, -50%)");
+            $(".otroTexto").css("transform", "translate(-50%, -50%)"); 
+            menuAbierto = false;
+        } else {
+            $(".foto").css("transform", "translate(-50%, 30%)");
+            $(".gradienteTexto").css("transform", "translate(-50%, 120%)");
+            $(".linksContacto").css("transform", "translate(-50%, 200%)");
+            $(".otroTexto").css("transform", "translate(-50%, 180%)"); 
+            menuAbierto = true;
+        }
+        
+    });
 
                         $('.toggle').click(function(){
           console.log("Toggle activado");

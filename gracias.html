@@ -332,6 +332,17 @@ input[type="checkbox"] {
     .toggle:checked:after {
       transform: translatex(20px); }
 
+      .banderaEsp {
+        margin: auto 10px;
+        cursor: pointer;
+    }
+
+    .banderaEng {
+        margin: auto 10px;
+        display: none;
+        cursor: pointer;
+    }
+
     </style>
 </head>
 <body class="objetoOscuro">
@@ -349,19 +360,21 @@ input[type="checkbox"] {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-0">
             <li class="nav-item active">
-              <a class="nav-link textoClaro" href="/">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link textoClaro" id="tabInicio" href="/">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link textoClaro " href="sobremi">Sobre mi</a>
+              <a class="nav-link textoClaro " id="tabSobreMi" href="sobremi">Sobre mi</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link textoClaro" href="portfolio">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link textoClaro" href="contacto">Contacto</a>
+                <a class="nav-link textoClaro" id="tabContacto" href="contacto">Contacto</a>
               </li>
           </ul>
-          <input type="checkbox" class="toggle" checked>
+          <input type="checkbox" class="toggle navbar-nav" checked>
+          <img src='esp.png' class='banderaEsp logo navbar-nav'>
+          <img src='eng.png' class='banderaEng logo navbar-nav'>
         </div>
       </nav>
       <div class='container-fluid'>
@@ -379,6 +392,27 @@ input[type="checkbox"] {
     <script>
 
 let modoOscuro = true;
+
+let idiomaEsEsp = true;
+
+  
+$(".banderaEsp").click(function(){
+            $(".banderaEsp").css("display", "none");
+            $(".banderaEng").css("display", "block");
+            idiomaEsEsp = false;
+            $("#tabInicio").html("Home");
+            $("#tabSobreMi").html("About me");
+            $("#tabContacto").html("Contact");
+    });
+
+    $(".banderaEng").click(function(){
+            $(".banderaEng").css("display", "none");
+            $(".banderaEsp").css("display", "block");
+            idiomaEsEsp = true;
+            $("#tabInicio").html("Inicio");
+            $("#tabSobreMi").html("Sobre mi");
+            $("#tabContacto").html("Contacto");
+    });
 
 if (modoOscuro){
   $(".textoClaro").css("color", "#FBFBFF !important");
