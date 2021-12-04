@@ -382,7 +382,7 @@ let modoOscuro = sessionStorage.getItem("modoOscuro");
 let menuAbierto = false;
 let idiomaEsEsp = sessionStorage.getItem("idiomaEsEsp");
 
-if (modoOscuro){
+if (modoOscuro === true || modoOscuro == ""){
   $(".textoClaro").css("color", "#FBFBFF !important");
   $("nav").css("borderBottom", "2px solid #FBFBFF");
   tsParticles.load("tsparticles", 
@@ -666,7 +666,15 @@ if (modoOscuro){
 } else {
   $(".textoClaro").css("color", "#0D0106 !important");
   $("nav").css("borderBottom, 2px solid #0D0106");
-  
+}
+
+if (idiomaEsEsp === true || idiomaEsEsp == ""){
+    $(".banderaEng").css("display", "none");
+            $(".banderaEsp").css("display", "block");
+            $("#tabInicio").html("Inicio");
+            $("#tabSobreMi").html("Sobre mi");
+            $("#tabContacto").html("Contacto");
+            $(".otroTexto").html("Estudiante de Ingeniería Civil Desarrollador Web Full-Stack");
 }
   
     $(".banderaEsp").click(function(){
