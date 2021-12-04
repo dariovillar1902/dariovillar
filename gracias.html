@@ -395,7 +395,7 @@ let modoOscuro = sessionStorage.getItem("modoOscuro");
 
       let idiomaEsEsp = sessionStorage.getItem("idiomaEsEsp");
 
-      if (modoOscuro === 'false'){
+      if (modoOscuro === 'false' || modoOscuro === false){
             $(".objetoOscuro").css("backgroundColor", "#FBFBFF !important");
             $(".textoClaro").css("color", "#0D0106 !important");
             $("nav").css("borderBottom", "2px solid #0D0106");
@@ -403,7 +403,7 @@ let modoOscuro = sessionStorage.getItem("modoOscuro");
             $("nav").addClass("navbar-light");
       }
 
-      if (idiomaEsEsp === 'false'){
+      if (idiomaEsEsp === 'false' || idiomaEsEsp === false){
         $(".banderaEsp").css("display", "none");
             $(".banderaEng").css("display", "block");
             $("#tabInicio").html("Home");
@@ -442,7 +442,7 @@ $(".banderaEsp").click(function(){
             $("#botonGracias").html("Volver");
     });
 
-if (modoOscuro === "true" || modoOscuro == null){
+if (modoOscuro === "true" || modoOscuro === true || modoOscuro == null){
   $(".textoClaro").css("color", "#FBFBFF !important");
   $("nav").css("borderBottom", "2px solid #FBFBFF");
 } else {
@@ -456,7 +456,7 @@ if (modoOscuro === "true" || modoOscuro == null){
 
         $('.toggle').click(function(){
           console.log("Toggle activado");
-          if (modoOscuro === "true" || modoOscuro == null){
+          if (modoOscuro === "true" || modoOscuro === true || modoOscuro == null){
             console.log("Cambio a modo claro");
             modoOscuro = false;
             sessionStorage.setItem("modoOscuro", modoOscuro);

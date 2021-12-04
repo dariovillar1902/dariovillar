@@ -382,7 +382,7 @@ let modoOscuro = sessionStorage.getItem("modoOscuro");
 let menuAbierto = false;
 let idiomaEsEsp = sessionStorage.getItem("idiomaEsEsp");
 
-if (modoOscuro === "true" || modoOscuro == null){
+if (modoOscuro === "true" || modoOscuro === true || modoOscuro == null){
   $(".textoClaro").css("color", "#FBFBFF !important");
   $("nav").css("borderBottom", "2px solid #FBFBFF");
   tsParticles.load("tsparticles", 
@@ -668,7 +668,7 @@ if (modoOscuro === "true" || modoOscuro == null){
   $("nav").css("borderBottom, 2px solid #0D0106");
 }
 
-if (idiomaEsEsp === "true" || idiomaEsEsp == null){
+if (idiomaEsEsp === "true" || idiomaEsEsp === true || idiomaEsEsp == null){
     $(".banderaEng").css("display", "none");
             $(".banderaEsp").css("display", "block");
             $("#tabInicio").html("Inicio");
@@ -718,7 +718,7 @@ if (idiomaEsEsp === "true" || idiomaEsEsp == null){
 
                         $('.toggle').click(function(){
           console.log("Toggle activado");
-          if (modoOscuro === "true" || modoOscuro == null){
+          if (modoOscuro === "true" || modoOscuro === true || modoOscuro == null){
             console.log("Cambio a modo claro");
             modoOscuro = false;
             sessionStorage.setItem("modoOscuro", modoOscuro);
