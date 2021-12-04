@@ -382,7 +382,7 @@ let modoOscuro = sessionStorage.getItem("modoOscuro");
 let menuAbierto = false;
 let idiomaEsEsp = sessionStorage.getItem("idiomaEsEsp");
 
-if (modoOscuro === "false"){
+if (modoOscuro === "true" || modoOscuro == null){
   $(".textoClaro").css("color", "#FBFBFF !important");
   $("nav").css("borderBottom", "2px solid #FBFBFF");
   tsParticles.load("tsparticles", 
@@ -668,7 +668,7 @@ if (modoOscuro === "false"){
   $("nav").css("borderBottom, 2px solid #0D0106");
 }
 
-if (idiomaEsEsp === "false"){
+if (idiomaEsEsp === "true" || idiomaEsEsp == null){
     $(".banderaEng").css("display", "none");
             $(".banderaEsp").css("display", "block");
             $("#tabInicio").html("Inicio");
