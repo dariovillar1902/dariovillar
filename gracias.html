@@ -456,7 +456,7 @@ if (modoOscuro === "true" || modoOscuro == null){
 
         $('.toggle').click(function(){
           console.log("Toggle activado");
-          if (modoOscuro){
+          if (modoOscuro === "true" || modoOscuro == null){
             console.log("Cambio a modo claro");
             modoOscuro = false;
             sessionStorage.setItem("modoOscuro", modoOscuro);

@@ -517,7 +517,7 @@ if (idiomaEsEsp === 'false'){
             $("#labelMail").html("Email address");
             $("#labelMensaje").html("Message");
             $("#botonMail").html("Send");
-            $("#iframeCV").attr("src", "cveng.html");
+            $("#iframeCV").attr("src", "cveng.pdf");
             $("#vistaPreviaCV").attr("href", "cveng.html");
             $("#descargarCV").attr("href", "cveng.pdf");
 }
@@ -602,7 +602,7 @@ if (modoOscuro === "true" || modoOscuro == null){
 
         $('.toggle').click(function(){
           console.log("Toggle activado");
-          if (modoOscuro){
+          if (modoOscuro === "true" || modoOscuro == null){
             console.log("Cambio a modo claro");
             modoOscuro = false;
             sessionStorage.setItem("modoOscuro", modoOscuro);
