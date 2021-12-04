@@ -448,7 +448,7 @@ input[type="checkbox"] {
                     <div class="progress-value" id="progress2"></div>
                 </div>
                 <button class="verMas"><a href="certificados.pdf" class='verMasLink' id="botonCertificados"> Ver certificados de cursos </a></button>
-                <button class="verMas"><a href="portfolio.html" class='verMasLink' id="botonProyectos"> Ver mis proyectos </a></button>
+                <button class="verMas"><a href="portfolio" class='verMasLink' id="botonProyectos"> Ver mis proyectos </a></button>
             </div>
             <div class='col-md-1'></div>
         </div>
@@ -456,15 +456,48 @@ input[type="checkbox"] {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
 
-let modoOscuro = true;
+let modoOscuro = sessionStorage.getItem("modoOscuro");
 
-let idiomaEsEsp = true;
+let idiomaEsEsp = sessionStorage.getItem("idiomaEsEsp");
+
+if (modoOscuro === false){
+      $(".objetoOscuro").css("backgroundColor", "#FBFBFF !important");
+      $(".textoClaro").css("color", "#0D0106 !important");
+      $("nav").css("borderBottom", "2px solid #0D0106");
+      $("nav").removeClass("navbar-dark");
+      $("nav").addClass("navbar-light");
+}
+
+if (idiomaEsEsp === false){
+    $(".banderaEsp").css("display", "none");
+            $(".banderaEng").css("display", "block");
+            $("#tabInicio").html("Home");
+            $("#tabSobreMi").html("About me");
+            $("#tabContacto").html("Contact");
+            $("#tituloSobreMi").html("About Me");
+            $("#descripcionSobreMi").html("I am Dario Villar, I live in Buenos Aires, Argentina. I am a third-year student of Civil Engineering at the National Technological University in Buenos Aires and a Full-Stack web developer. My goals are to gain experience in the work field of full-stack web development, adding value to a team which allows me to improve what I learned through attending multiple online courses and certifications. Another goal is to make a positive impact in the user experience and to add value to the final product. In the future, I would like to combine my experience in Full-Stack web development with the work field of Civil Engineering and the building industry.");
+            $("#tituloIngenieria").html("Civil Engineering");
+            $("#descripcionIng").html("I am in the third year of my university courses, from a <a class='linksUtiles textoClaro' href='https://frba.utn.edu.ar/wp-content/uploads/2019/01/Correlativas-Plan-95-Adecuado-2019.pdf'>6-year degree</a>. In the future, I plan to follow the Means of Transport profile and work in Transport Engineering. I attend courses at the <a class='linksUtiles textoClaro' href='https://www.frba.utn.edu.ar/'>National Technological University, in Buenos Aires.</a> I started my career in 2019, so I only had a year of in-person courses, and two years online. I learned greatly about different aspects of Engineering, including basic Math and Physics, structural analysis and technologies related to materials and construction. Moreover, my university prepared me to work in a team, as well as to make blueprints and other documents needed for building, through <a class='linksUtiles textoClaro' href='https://latinoamerica.autodesk.com/products/autocad/overview'>AutoCAD</a>, Excel spreadsheets, <a class='linksUtiles textoClaro' href='https://www.mathcad.com/en/'>Mathcad</a>, <a class='linksUtiles textoClaro' href='https://www.bentley.com/es/products/product-line/structural-analysis-software/ram-elements'>RAM Elements</a>, among other programs and applications.");
+            $("#descripcionAgno").html("year of my degree");
+            $("#descripcionMaterias").html("completed subjects");
+            $("#descripcionPromedio").html("current GPA");
+            $("#botonMateriasAprobadas").html("Watch my completed subjects");
+            $("#botonTrabajosRealizados").html("Watch my work");
+            $("#tituloDesarrollo").html("Full-Stack Web Development");
+            $("#descripcionDes").html("I have always been interested in programming and software, particularly in web development. Since I was 15 years old, I took courses in a completely self-taught way, and I developed multiple websites for friends and family, and even for work regarding my high school or my university. I learned programming languages and tools such as HTML5, CSS3, JavaScript, jQuery, Bootstrap, WordPress, PHP, mySQL, Python, Node, React, .NET, Git/GitHub, among other technologies. The courses are from many platforms, including my university, UTN FRBA (through a program of scholarships called <a class='linksUtiles textoClaro' href='https://becas.neoris.com'>Becas NEORIS</a>), <a class='linksUtiles textoClaro' href='https://www.udemy.com/'>Udemy</a>, <a class='linksUtiles textoClaro' href='https://www.linkedin.com/learning/'>LinkedIn Learning</a>, <a class='linksUtiles textoClaro' href='https://es.coursera.org/'>Coursera</a>, among others. I am constantly on the lookout for new tools and resources which could help me with my projects, in order to achieve my goals. Currently, I am learning more about React and Node, since JavaScript is one of my favourite development languages. In the future, my idea is to get a job that allows me to gain experience, putting into practice all the knowledge I acquired in these courses and certifications. ");
+            $("#descripcionCursos").html("courses and certifications");
+            $("#descripcionHoras").html("hours of lessons");
+            $("#descripcionProyectos").html("projects completed");
+            $("#botonCertificados").html("Watch my certificates");
+            $("#botonProyectos").html("Watch my projects");
+}
 
   
 $(".banderaEsp").click(function(){
             $(".banderaEsp").css("display", "none");
             $(".banderaEng").css("display", "block");
             idiomaEsEsp = false;
+            sessionStorage.setItem("idiomaEsEsp", idiomaEsEsp);
             $("#tabInicio").html("Home");
             $("#tabSobreMi").html("About me");
             $("#tabContacto").html("Contact");
@@ -490,6 +523,7 @@ $(".banderaEsp").click(function(){
             $(".banderaEng").css("display", "none");
             $(".banderaEsp").css("display", "block");
             idiomaEsEsp = true;
+            sessionStorage.setItem("idiomaEsEsp", idiomaEsEsp);
             $("#tabInicio").html("Inicio");
             $("#tabSobreMi").html("Sobre mi");
             $("#tabContacto").html("Contacto");
@@ -674,6 +708,7 @@ if (modoOscuro){
           if (modoOscuro){
             console.log("Cambio a modo claro");
             modoOscuro = false;
+            sessionStorage.setItem("modoOscuro", modoOscuro);
             $(".objetoOscuro").css("backgroundColor", "#FBFBFF !important");
             $(".textoClaro").css("color", "#0D0106 !important");
             $("nav").css("borderBottom", "2px solid #0D0106");
@@ -685,6 +720,7 @@ if (modoOscuro){
           } else {
             console.log("Cambio a modo oscuro");
             modoOscuro = true;
+            sessionStorage.setItem("modoOscuro", modoOscuro);
             $(".objetoOscuro").css("backgroundColor", "#0D0106 !important");
             $(".textoClaro").css("color", "#FBFBFF !important");
             $("nav").css("borderBottom", "2px solid #FBFBFF");

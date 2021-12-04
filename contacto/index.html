@@ -422,7 +422,7 @@ input[type="checkbox"] {
             <div class='col-md-1'></div>
             <div class='col-md-5 divArchivo'>
                 <h4 class="textoClaro" id='tituloCV'> Curriculum Vitae </h4>
-                <iframe src='cv.pdf'> </iframe>
+                <iframe src='cv.pdf' id="iframeCV"> </iframe>
                 <button class="verMas"><a href="cv.html" class='verMasLink botonVistaPrevia' id="vistaPreviaCV"> Vista Previa </a></button>
                 <br>
                 <button class="verMas"><a href="cv.pdf" class='verMasLink botonDescargar' id="descargarCV" download> Descargar </a></button>
@@ -488,15 +488,21 @@ input[type="checkbox"] {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
-      let modoOscuro = true;
+      let modoOscuro = sessionStorage.getItem("modoOscuro");
 
-      let idiomaEsEsp = true;
+let idiomaEsEsp = sessionStorage.getItem("idiomaEsEsp");
 
-  
-$(".banderaEsp").click(function(){
+if (modoOscuro === false){
+  $(".objetoOscuro").css("backgroundColor", "#FBFBFF !important");
+            $(".textoClaro").css("color", "#0D0106 !important");
+            $("nav").css("borderBottom", "2px solid #0D0106");
+            $("nav").removeClass("navbar-dark");
+            $("nav").addClass("navbar-light");
+}
+
+if (idiomaEsEsp === false){
             $(".banderaEsp").css("display", "none");
             $(".banderaEng").css("display", "block");
-            idiomaEsEsp = false;
             $("#tabInicio").html("Home");
             $("#tabSobreMi").html("About me");
             $("#tabContacto").html("Contact");
@@ -511,6 +517,31 @@ $(".banderaEsp").click(function(){
             $("#labelMail").html("Email address");
             $("#labelMensaje").html("Message");
             $("#botonMail").html("Send");
+            $("#iframeCV").attr("src", "cveng.html");
+            $("#vistaPreviaCV").attr("href", "cveng.html");
+            $("#descargarCV").attr("href", "cveng.pdf");
+}
+  
+$(".banderaEsp").click(function(){
+            $(".banderaEsp").css("display", "none");
+            $(".banderaEng").css("display", "block");
+            idiomaEsEsp = false;
+            sessionStorage.setItem("idiomaEsEsp", idiomaEsEsp);
+            $("#tabInicio").html("Home");
+            $("#tabSobreMi").html("About me");
+            $("#tabContacto").html("Contact");
+            $("#tituloContacto").html("Contact");
+            $("#tituloCV").html("Resume");
+            $("#tituloCarta").html("Cover Letter");
+            $("#tituloMensaje").html("Send a message");
+            $(".botonVistaPrevia").html("Preview");
+            $(".botonDescargar").html("Download");
+            $("#labelNombre").html("Name");
+            $("#labelAsunto").html("Subject");
+            $("#labelMail").html("Email address");
+            $("#labelMensaje").html("Message");
+            $("#botonMail").html("Send");
+            $("#iframeCV").attr("src", "cveng.html");
             $("#vistaPreviaCV").attr("href", "cveng.html");
             $("#descargarCV").attr("href", "cveng.pdf");
     });
@@ -519,6 +550,7 @@ $(".banderaEsp").click(function(){
             $(".banderaEng").css("display", "none");
             $(".banderaEsp").css("display", "block");
             idiomaEsEsp = true;
+            sessionStorage.setItem("idiomaEsEsp", idiomaEsEsp);
             $("#tabInicio").html("Inicio");
             $("#tabSobreMi").html("Sobre mi");
             $("#tabContacto").html("Contacto");
@@ -533,7 +565,9 @@ $(".banderaEsp").click(function(){
             $("#labelMail").html("Correo electrónico");
             $("#labelMensaje").html("Mensaje");
             $("#botonMail").html("Enviar");
+            $("#iframeCV").attr("src", "cv.html");
             $("#vistaPreviaCV").attr("href", "cv.html");
+            $("#descargarCV").attr("href", "cv.pdf");
     });
 
 if (modoOscuro){
@@ -571,6 +605,7 @@ if (modoOscuro){
           if (modoOscuro){
             console.log("Cambio a modo claro");
             modoOscuro = false;
+            sessionStorage.setItem("modoOscuro", modoOscuro);
             $(".objetoOscuro").css("backgroundColor", "#FBFBFF !important");
             $(".textoClaro").css("color", "#0D0106 !important");
             $("nav").css("borderBottom", "2px solid #0D0106");
@@ -579,6 +614,7 @@ if (modoOscuro){
           } else {
             console.log("Cambio a modo oscuro");
             modoOscuro = true;
+            sessionStorage.setItem("modoOscuro", modoOscuro);
             $(".objetoOscuro").css("backgroundColor", "#0D0106 !important");
             $(".textoClaro").css("color", "#FBFBFF !important");
             $("nav").css("borderBottom", "2px solid #FBFBFF");

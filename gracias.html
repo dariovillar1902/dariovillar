@@ -381,9 +381,9 @@ input[type="checkbox"] {
         <div class='row' id='sobreMi'>
             <div class='col-md-1'></div>
             <div class='col-md-10'>
-                <h1> Gracias </h1>
-                <p class='descripcion textoClaro'> Gracias por enviarme un mensaje a través de esta página. En breve lo estaré viendo para responder tus inquietudes. </p>
-                <button class="verMas"><a href="contacto.html" class='verMasLink'> Volver </a></button>
+                <h1 id="tituloGracias"> Gracias </h1>
+                <p class='descripcion textoClaro' id="descripcionGracias"> Gracias por enviarme un mensaje a través de esta página. En breve lo estaré viendo para responder tus inquietudes. </p>
+                <button class="verMas" id="botonGracias"><a href="contacto/index.html" class='verMasLink'> Volver </a></button>
             </div>
             <div class='col-md-1'></div>
         </div>
@@ -391,27 +391,55 @@ input[type="checkbox"] {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
 
-let modoOscuro = true;
+let modoOscuro = sessionStorage.getItem("modoOscuro");
 
-let idiomaEsEsp = true;
+      let idiomaEsEsp = sessionStorage.getItem("idiomaEsEsp");
+
+      if (modoOscuro === false){
+            $(".objetoOscuro").css("backgroundColor", "#FBFBFF !important");
+            $(".textoClaro").css("color", "#0D0106 !important");
+            $("nav").css("borderBottom", "2px solid #0D0106");
+            $("nav").removeClass("navbar-dark");
+            $("nav").addClass("navbar-light");
+      }
+
+      if (idiomaEsEsp === false){
+        $(".banderaEsp").css("display", "none");
+            $(".banderaEng").css("display", "block");
+            $("#tabInicio").html("Home");
+            $("#tabSobreMi").html("About me");
+            $("#tabContacto").html("Contact");
+            $("#tituloGracias").html("Thank You");
+            $("#descripcionGracias").html("Thank you for sending me a message through my website. I will be looking at it soon to answer to your inquiries.");
+            $("#botonGracias").html("Go Back");
+      }
+
 
   
 $(".banderaEsp").click(function(){
             $(".banderaEsp").css("display", "none");
             $(".banderaEng").css("display", "block");
             idiomaEsEsp = false;
+            sessionStorage.setItem("idiomaEsEsp", idiomaEsEsp);
             $("#tabInicio").html("Home");
             $("#tabSobreMi").html("About me");
             $("#tabContacto").html("Contact");
+            $("#tituloGracias").html("Thank You");
+            $("#descripcionGracias").html("Thank you for sending me a message through my website. I will be looking at it soon to answer to your inquiries.");
+            $("#botonGracias").html("Go Back");
     });
 
     $(".banderaEng").click(function(){
             $(".banderaEng").css("display", "none");
             $(".banderaEsp").css("display", "block");
             idiomaEsEsp = true;
+            sessionStorage.setItem("idiomaEsEsp", idiomaEsEsp);
             $("#tabInicio").html("Inicio");
             $("#tabSobreMi").html("Sobre mi");
             $("#tabContacto").html("Contacto");
+            $("#tituloGracias").html("Gracias");
+            $("#descripcionGracias").html("Gracias por enviarme un mensaje a través de esta página. En breve lo estaré viendo para responder tus inquietudes.");
+            $("#botonGracias").html("Volver");
     });
 
 if (modoOscuro){
@@ -431,6 +459,7 @@ if (modoOscuro){
           if (modoOscuro){
             console.log("Cambio a modo claro");
             modoOscuro = false;
+            sessionStorage.setItem("modoOscuro", modoOscuro);
             $(".objetoOscuro").css("backgroundColor", "#FBFBFF !important");
             $(".textoClaro").css("color", "#0D0106 !important");
             $("nav").css("borderBottom", "2px solid #0D0106");
@@ -439,6 +468,7 @@ if (modoOscuro){
           } else {
             console.log("Cambio a modo oscuro");
             modoOscuro = true;
+            sessionStorage.setItem("modoOscuro", modoOscuro);
             $(".objetoOscuro").css("backgroundColor", "#0D0106 !important");
             $(".textoClaro").css("color", "#FBFBFF !important");
             $("nav").css("borderBottom", "2px solid #FBFBFF");
