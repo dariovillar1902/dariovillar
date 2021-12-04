@@ -873,7 +873,7 @@ $(".banderaEsp").click(function(){
             $("#infoSyzygy").html("<p><i class='fas fa-calendar'></i> octubre de 2017 <i class='fas fa-clock'></i> 1 mes </p><p><i class='fas fa-list'></i> Esta página fue creada para un trabajo práctico de la materia Comercialización, en 4° año de mi colegio secundario. Es una página bastante básica debido a que en ese momento sólo sabía HTML, CSS y JavaScript básico. La página era 100% responsive a través de Bootstrap, por lo que podía ser vista desde cualquier dispositivo.  </p><p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> En mi grupo de trabajo de 2 personas, mi compañero se encargó de la confección del logo en distintas variantes (visible en la página de inicio) y yo realicé enteramente el desarrollo de esta página. Tomamos en cuenta todas las correcciones del profesor, aplicándolas como si fuera un cliente y preguntando todo lo que fuera necesario para mejorar nuestra página.</p><p> Lamentablemente, el hosting de esta página fue descontinuado, por lo que no es posible visitarla. Lo que se ve en las fotos es toda la información que fue posible rescatar. Sin embargo, fue mi primer proyecto y aprendí mucho.</p><p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p><h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4><form method='get' action='contacto.html'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Volver</button></form>");
           });
 
-      if (modoOscuro){
+      if (modoOscuro === "true" || modoOscuro == null){
         $(".textoClaro").css("color", "#FBFBFF !important");
         $("nav").css("borderBottom", "2px solid #FBFBFF");
       } else {

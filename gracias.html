@@ -442,7 +442,7 @@ $(".banderaEsp").click(function(){
             $("#botonGracias").html("Volver");
     });
 
-if (modoOscuro){
+if (modoOscuro === "true" || modoOscuro == null){
   $(".textoClaro").css("color", "#FBFBFF !important");
   $("nav").css("borderBottom", "2px solid #FBFBFF");
 } else {

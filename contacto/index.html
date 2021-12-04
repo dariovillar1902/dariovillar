@@ -541,7 +541,7 @@ $(".banderaEsp").click(function(){
             $("#labelMail").html("Email address");
             $("#labelMensaje").html("Message");
             $("#botonMail").html("Send");
-            $("#iframeCV").attr("src", "cveng.html");
+            $("#iframeCV").attr("src", "cveng.pdf");
             $("#vistaPreviaCV").attr("href", "cveng.html");
             $("#descargarCV").attr("href", "cveng.pdf");
     });
@@ -565,12 +565,12 @@ $(".banderaEsp").click(function(){
             $("#labelMail").html("Correo electrónico");
             $("#labelMensaje").html("Mensaje");
             $("#botonMail").html("Enviar");
-            $("#iframeCV").attr("src", "cv.html");
+            $("#iframeCV").attr("src", "cv.pdf");
             $("#vistaPreviaCV").attr("href", "cv.html");
             $("#descargarCV").attr("href", "cv.pdf");
     });
 
-if (modoOscuro){
+if (modoOscuro === "true" || modoOscuro == null){
   $(".textoClaro").css("color", "#FBFBFF !important");
   $("nav").css("borderBottom", "2px solid #FBFBFF");
 } else {
