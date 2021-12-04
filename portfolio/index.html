@@ -402,7 +402,7 @@ input[type="checkbox"] {
             <div class='col-md-1'></div>
             <div class='col-md-10'>
                 <h1> Portfolio </h1>
-                <p class='descripcion textoClaro'> En esta página se encuentran algunos de mis proyectos más recientes, realizados tanto a título personal como para familia y amigos, y para terceros. Al hacer click en cada proyecto se pueden observar múltiples capturas de pantalla acompañadas de una breve descripción, la fecha en la que fue realizado y su duración, funciones o controles adicionales, las tecnologías utilizadas, y posibles mejoras para el futuro. Hay posibilidad de visitar cada página, y de ver su código en el repositorio correspondiente de GitHub. </p>
+                <p class='descripcion textoClaro' id="descripcionPortfolio"> En esta página se encuentran algunos de mis proyectos más recientes, realizados tanto a título personal como para familia y amigos, y para terceros. Al hacer click en cada proyecto se pueden observar múltiples capturas de pantalla acompañadas de una breve descripción, la fecha en la que fue realizado y su duración, funciones o controles adicionales, las tecnologías utilizadas, y posibles mejoras para el futuro. Hay posibilidad de visitar cada página, y de ver su código en el repositorio correspondiente de GitHub. </p>
             </div>
             <div class='col-md-1'></div>
         </div>
@@ -435,24 +435,19 @@ input[type="checkbox"] {
                 <div class='row' id='fila2Portfolio'>
                     <div class='col-lg-4'>
                         <div class='containerImagen'>
-                            <img src='screenshots/syzygy1.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modalHDP">
-                            <h6 class="tituloProyecto"> Syzygy Consulting Group </h6>
-                            <button class="verMas" data-bs-toggle="modal" data-bs-target="#modalSyzygy"> Ver proyecto </button>
+                            <img src='screenshots/qwq1.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modalHDP">
+                            <h6 class="tituloProyecto"> QWQ Latino América LLC </h6>
+                            <button class="verMas" data-bs-toggle="modal" data-bs-target="#modalQWQ"> Ver proyecto </button>
                         </div>
                     </div>
                     <div class='col-lg-4'>
                         <div class='containerImagen'>
-                            <img src='screenshots/100Arg1.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modal100Arg">
-                            <h6 class="tituloProyecto"> 100 Argentinos Dicen </h6>
-                            <button class="verMas" data-bs-toggle="modal" data-bs-target="#modal100Arg"> Ver proyecto </button>
-                        </div>
+                          <img src='screenshots/syzygy1.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modalHDP">
+                          <h6 class="tituloProyecto"> Syzygy Consulting Group </h6>
+                          <button class="verMas" data-bs-toggle="modal" data-bs-target="#modalSyzygy"> Ver proyecto </button>
+                      </div>
                     </div>
                     <div class='col-lg-4'>
-                        <div class='containerImagen'>
-                            <img src='screenshots/dariovillar1.png' class='vistaPrevia animate__animated animate__fadeInDown' data-bs-toggle="modal" data-bs-target="#modalDarioVillar">
-                            <h6 class="tituloProyecto"> Página Personal - Darío Villar </h6>
-                            <button class="verMas" data-bs-toggle="modal" data-bs-target="#modalDarioVillar"> Ver proyecto </button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -507,33 +502,35 @@ input[type="checkbox"] {
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
-                  <p><i class="fas fa-calendar"></i> agosto de 2021 <i class="fas fa-clock"></i> 1 mes </p>
-                  <p><i class="fas fa-list"></i> Recreación del popular juego Hasta Donde Puedas/Cards Against Humanity en versión online. Se elige una carta negra al azar y luego se reparten 10 cartas blancas a cada jugador. Por turnos, los jugadores deben elegir la carta blanca que crean que mejor completa a la carta negra. Luego, todos los jugadores votan por la carta que les parece más graciosa, y le otorgan un punto. El primer jugador que llega a 5 puntos gana el juego. </p>
-                  <p><i class="fas fa-mouse-pointer"></i> <b>Controles:</b>
-                      <ul><li>
-                        Drag and drop sobre las cartas con el mouse, luego en la votación hacer click sobre la carta elegida
-                      </li><li>
-                        Números del 1 al 0 para elegir la carta en la posición correspondiente durante el juego, luego números del 1 a la cantidad de jugadores para elegir la carta en la votación.
-                      </li></ul>
-                  </p>
-                  <p><i class="fas fa-ellipsis-h"></i><b> Otras funciones:</b> posibilidad de activar modo automático (juega y vota automáticamente en cada ronda), mezclar todas las cartas hasta 3 veces en una partida, activar modo claro u oscuro, cambiar opciones de juego.
-                  </p>
-                  <p><i class="fas fa-long-arrow-alt-right"></i><b> Proyecto:</b> agregar salas, mejorar el estilo general del juego, permitir la inclusión de los distintos packs y extensiones que trae el juego real. </p>
-                  <p><i class="fas fa-rocket"></i><b> Tecnologías utilizadas: </b> </p>
-                  <h4> Node.js – Phaser 3 – Socket.IO – HTML5 – Express - Heroku </h4>
-                  
-                  <form method="get" action="https://hdpjuego.herokuapp.com">
-                    <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
-                        <i class="fas fa-wifi"></i>
-                        Ir a la página
-                    </button>
-                </form>
-                <form method="get" action="https://github.com/dariovillar1902/cah">
-                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
-                        <i class="fab fa-github"></i>
-                        Ver en GitHub
-                    </button>
-                </form>
+                  <div id="infoHDP">
+                      <p><i class='fas fa-calendar'></i> agosto de 2021 <i class='fas fa-clock'></i> 1 mes </p>
+                      <p><i class='fas fa-list'></i> Recreación del popular juego Hasta Donde Puedas/Cards Against Humanity en versión online. Se elige una carta negra al azar y luego se reparten 10 cartas blancas a cada jugador. Por turnos, los jugadores deben elegir la carta blanca que crean que mejor completa a la carta negra. Luego, todos los jugadores votan por la carta que les parece más graciosa, y le otorgan un punto. El primer jugador que llega a 5 puntos gana el juego. </p>
+                      <p><i class='fas fa-mouse-pointer'></i> <b>Controles:</b>
+                          <ul><li>
+                            Drag and drop sobre las cartas con el mouse, luego en la votación hacer click sobre la carta elegida
+                          </li><li>
+                            Números del 1 al 0 para elegir la carta en la posición correspondiente durante el juego, luego números del 1 a la cantidad de jugadores para elegir la carta en la votación.
+                          </li></ul>
+                      </p>
+                      <p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> posibilidad de activar modo automático (juega y vota automáticamente en cada ronda), mezclar todas las cartas hasta 3 veces en una partida, activar modo claro u oscuro, cambiar opciones de juego.
+                      </p>
+                      <p><i class='fas fa-long-arrow-alt-right'></i><b> Proyecto:</b> agregar salas, mejorar el estilo general del juego, permitir la inclusión de los distintos packs y extensiones que trae el juego real. </p>
+                      <p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p>
+                      <h4> Node.js – Phaser 3 – Socket.IO – HTML5 – Express - Heroku </h4>
+                      
+                      <form method='get' action='https://hdpjuego.herokuapp.com'>
+                        <button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'>
+                            <i class='fas fa-wifi'></i>
+                            Ir a la página
+                        </button>
+                    </form>
+                    <form method='get' action='https://github.com/dariovillar1902/cah'>
+                        <button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'>
+                            <i class='fab fa-github'></i>
+                            Ver en GitHub
+                        </button>
+                    </form>
+                  </div>
             </div>
           </div>
         </div>
@@ -577,12 +574,13 @@ input[type="checkbox"] {
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
-                  <p><i class="fas fa-calendar"></i> septiembre de 2021 <i class="fas fa-clock"></i> 1 semana </p>
-                  <p><i class="fas fa-list"></i> Recreación de la pantalla digital del popular programa 100 Argentinos Dicen/Family Feud.
+                  <div id="info100Arg">
+                  <p><i class='fas fa-calendar'></i> septiembre de 2021 <i class='fas fa-clock'></i> 1 semana </p>
+                  <p><i class='fas fa-list'></i> Recreación de la pantalla digital del popular programa 100 Argentinos Dicen/Family Feud.
 
                     Se realiza una pregunta y se muestran hasta 8 respuestas principales, en orden de más popular a menos popular. Dos equipos compiten por ver quién puede acumular la mayor cantidad de puntos producto de adivinar la mayor cantidad de opciones posibles. Tienen hasta 3 intentos (cruces) para conseguir todas las opciones. 
                      </p>
-                  <p><i class="fas fa-mouse-pointer"></i> <b>Controles:</b>
+                  <p><i class='fas fa-mouse-pointer'></i> <b>Controles:</b>
                       <ul><li>
                         Barra espaciadora: sonido de pulsador
                       </li><li>
@@ -599,23 +597,24 @@ input[type="checkbox"] {
                       </li>
                     </ul>
                   </p>
-                  <p><i class="fas fa-ellipsis-h"></i>Al final del programa, dos de los participantes del equipo ganador se someten al dinero rápido. En esta ronda, se hacen 5 preguntas de las cuales se deben adivinar las opciones más populares. Uno de los jugadores responde primero, debe responder en 20 segundos. Luego, responde el otro jugador en 25 segundos, pero no puede repetir ninguna de las opciones que ya dijo el jugador anterior. Si en esta ronda se consiguen 200 puntos, se gana el juego.
+                  <p><i class='fas fa-ellipsis-h'></i>Al final del programa, dos de los participantes del equipo ganador se someten al dinero rápido. En esta ronda, se hacen 5 preguntas de las cuales se deben adivinar las opciones más populares. Uno de los jugadores responde primero, debe responder en 20 segundos. Luego, responde el otro jugador en 25 segundos, pero no puede repetir ninguna de las opciones que ya dijo el jugador anterior. Si en esta ronda se consiguen 200 puntos, se gana el juego.
                   </p>
-                  <p><i class="fas fa-long-arrow-alt-right"></i><b> Proyecto:</b> configurar preguntas con sus opciones que se puedan subir y editar fácilmente, y agregar los nombres de los dos equipos que juegan con la puntuación parcial de cada equipo. </p>
-                  <p><i class="fas fa-rocket"></i><b> Tecnologías utilizadas: </b> </p>
+                  <p><i class='fas fa-long-arrow-alt-right'></i><b> Proyecto:</b> configurar preguntas con sus opciones que se puedan subir y editar fácilmente, y agregar los nombres de los dos equipos que juegan con la puntuación parcial de cada equipo. </p>
+                  <p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p>
                   <h4> HTML5 – CSS3 – JavaScript – jQuery - SMTP </h4>
-                  <form method="get" action="https://100argentinosdicen.vercel.app">
-                    <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
-                        <i class="fas fa-wifi"></i>
+                  <form method='get' action='https://100argentinosdicen.vercel.app'>
+                    <button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'>
+                        <i class='fas fa-wifi'></i>
                         Ir a la página
                     </button>
                 </form>
-                <form method="get" action="https://github.com/dariovillar1902/100argentinosdicen">
-                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
-                        <i class="fab fa-github"></i>
+                <form method='get' action='https://github.com/dariovillar1902/100argentinosdicen'>
+                    <button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'>
+                        <i class='fab fa-github'></i>
                         Ver en GitHub
                     </button>
                 </form>
+              </div>
             </div>
           </div>
         </div>
@@ -659,26 +658,84 @@ input[type="checkbox"] {
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
-                  <p><i class="fas fa-calendar"></i> noviembre de 2021 <i class="fas fa-clock"></i> 1 día </p>
-                  <p><i class="fas fa-list"></i> Esta misma página fue creada desde cero debido a la necesidad de tener un lugar donde mostrar mis proyectos de desarrollo web. Hice uso de múltiples recursos visuales y herramientas de diseño para hacer una página agradable, con un maquetado simple que permita ver mi información personal de forma clara, ordenada y divertida. Aprendí a usar componentes de muchas fuentes distintas, tales como tsParticles, elementos para barras de progreso, gradientes de texto con CSS, contadores automáticos con JS y varios componentes de Bootstrap como Modals, Carruseles y Tooltips. Además, esta página es 100% responsive, por lo que puede ser visualizada desde dispositivos de cualquier tamaño sin ningún problema.  </p>
-                  <p><i class="fas fa-ellipsis-h"></i><b> Otras funciones:</b> La página tiene 4 secciones: un Inicio atractivo visualmente que invita a quien entre a la página a continuar navegando, una sección Sobre Mi con información personal y estadísticas sobre mi desempeño, una sección de Portfolio en donde muestro mis proyectos y una sección de Contacto en donde se puede descargar mi CV y carta de presentación, así como enviarme comentarios o sugerencias.
+                  <div id="infoDarioVillar">
+                    <p><i class='fas fa-calendar'></i> noviembre de 2021 <i class='fas fa-clock'></i> 3 días </p>
+                    <p><i class='fas fa-list'></i> Esta misma página fue creada desde cero debido a la necesidad de tener un lugar donde mostrar mis proyectos de desarrollo web. Hice uso de múltiples recursos visuales y herramientas de diseño para hacer una página agradable, con un maquetado simple que permita ver mi información personal de forma clara, ordenada y divertida. Aprendí a usar componentes de muchas fuentes distintas, tales como tsParticles, elementos para barras de progreso, gradientes de texto con CSS, contadores automáticos con JS y varios componentes de Bootstrap como Modals, Carruseles y Tooltips. Además, esta página es 100% responsive, por lo que puede ser visualizada desde dispositivos de cualquier tamaño sin ningún problema.  </p>
+                    <p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> La página tiene 4 secciones: un Inicio atractivo visualmente que invita a quien entre a la página a continuar navegando, una sección Sobre Mi con información personal y estadísticas sobre mi desempeño, una sección de Portfolio en donde muestro mis proyectos y una sección de Contacto en donde se puede descargar mi CV y carta de presentación, así como enviarme comentarios o sugerencias.
+                    </p>
+                    <p><i class='fas fa-long-arrow-alt-right'></i><b> Proyecto:</b> implementar modo claro, páginas en español e inglés, seguir mejorando la página para que sea más atractiva visualmente y ampliar mi portfolio </p>
+                    <p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p>
+                    <h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4>
+                    
+                      <form method='get' action='home.html'>
+                          <button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'>
+                              <i class='fas fa-wifi'></i>
+                              Ir al inicio
+                          </button>
+                      </form>
+                      <form method='get' action='https://github.com/dariovillar1902/dariovillar'>
+                          <button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'>
+                              <i class='fab fa-github'></i>
+                              Ver en GitHub
+                          </button>
+                      </form>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal-signin bg-dark py-5 modal-fullscreen" tabindex="-1" role="dialog" id="modalQWQ">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-5 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+              <h3 class="modal-title"> QWQ Latino América LLC </h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <div class="modal-body p-5 pt-0">
+                <div id="myCarousel5" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#myCarousel5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#myCarousel5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#myCarousel5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src='screenshots/qwq1.png' class='screenshotModal'>
+                      </div>
+                      <div class="carousel-item">
+                        <img src='screenshots/qwq2.png' class='screenshotModal'>
+                      </div>
+                      <div class="carousel-item">
+                        <img src='screenshots/qwq3.png' class='screenshotModal'>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel5" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel5" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div id="infoQWQ">
+                  <p><i class='fas fa-calendar'></i> 2018 - 2019 <i class='fas fa-clock'></i> 1 mes </p>
+                  <p><i class='fas fa-list'></i> Esta página fue creada para la empresa de Oftalmología QWQ Latino América LLC. Es una página básica con información sobre los productos de oftalmología HD Analyzer y Tear Film Analyzer, sus folletos y características correspondientes. También tiene una sección de contacto con un formulario que envía un mensaje directamente a los responsables de atención al cliente de la compañía. </p>
+                  <p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> La página es 100% responsive, puede verse desde dispositivos móviles sin problemas.
                   </p>
-                  <p><i class="fas fa-long-arrow-alt-right"></i><b> Proyecto:</b> implementar modo claro, páginas en español e inglés, seguir mejorando la página para que sea más atractiva visualmente y ampliar mi portfolio </p>
-                  <p><i class="fas fa-rocket"></i><b> Tecnologías utilizadas: </b> </p>
-                  <h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4>
+                  <p> Lamentablemente, el hosting de esta página fue descontinuado, por lo que no es posible visitarla. Lo que se ve en las fotos es toda la información que fue posible rescatar. Sin embargo, fue el primer proyecto en el que tuve contacto con clientes, y me aseguré de escuchar e interpretar sus pedidos para obtener una página atractiva e informativa.
+                  </p>
+                  <p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p>
+                  <h4> HTML5 - CSS3 - Bootstrap - JavaScript - PHP </h4>
                   
-                    <form method="get" action="home.html">
-                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
-                            <i class="fas fa-wifi"></i>
-                            Ir al inicio
+                    <form method='get' action='contacto.html'>
+                        <button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'>
+                            <i class='fas fa-wifi'></i>
+                            Volver
                         </button>
                     </form>
-                    <form method="get" action="https://github.com/dariovillar1902/dariovillar">
-                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
-                            <i class="fab fa-github"></i>
-                            Ver en GitHub
-                        </button>
-                    </form>
+                  </div>
             </div>
           </div>
         </div>
@@ -722,21 +779,23 @@ input[type="checkbox"] {
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
-                  <p><i class="fas fa-calendar"></i> octubre de 2017 <i class="fas fa-clock"></i> 1 mes </p>
-                  <p><i class="fas fa-list"></i> Esta página fue creada para un trabajo práctico de la materia Comercialización, en 4° año de mi colegio secundario. Es una página bastante básica debido a que en ese momento sólo sabía HTML, CSS y JavaScript básico. La página era 100% responsive a través de Bootstrap, por lo que podía ser vista desde cualquier dispositivo.  </p>
-                  <p><i class="fas fa-ellipsis-h"></i><b> Otras funciones:</b> En mi grupo de trabajo de 2 personas, mi compañero se encargó de la confección del logo en distintas variantes (visible en la página de inicio) y yo realicé enteramente el desarrollo de esta página. Tomamos en cuenta todas las correcciones del profesor, aplicándolas como si fuera un cliente y preguntando todo lo que fuera necesario para mejorar nuestra página.
+                  <div id="infoSyzygy">
+                  <p><i class='fas fa-calendar'></i> octubre de 2017 <i class='fas fa-clock'></i> 1 mes </p>
+                  <p><i class='fas fa-list'></i> Esta página fue creada para un trabajo práctico de la materia Comercialización, en 4° año de mi colegio secundario. Es una página bastante básica debido a que en ese momento sólo sabía HTML, CSS y JavaScript básico. La página era 100% responsive a través de Bootstrap, por lo que podía ser vista desde cualquier dispositivo.  </p>
+                  <p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> En mi grupo de trabajo de 2 personas, mi compañero se encargó de la confección del logo en distintas variantes (visible en la página de inicio) y yo realicé enteramente el desarrollo de esta página. Tomamos en cuenta todas las correcciones del profesor, aplicándolas como si fuera un cliente y preguntando todo lo que fuera necesario para mejorar nuestra página.
                   </p>
                   <p> Lamentablemente, el hosting de esta página fue descontinuado, por lo que no es posible visitarla. Lo que se ve en las fotos es toda la información que fue posible rescatar. Sin embargo, fue mi primer proyecto y aprendí mucho.
                   </p>
-                  <p><i class="fas fa-rocket"></i><b> Tecnologías utilizadas: </b> </p>
+                  <p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p>
                   <h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4>
                   
-                    <form method="get" action="contacto.html">
-                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
-                            <i class="fas fa-wifi"></i>
+                    <form method='get' action='contacto.html'>
+                        <button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'>
+                            <i class='fas fa-wifi'></i>
                             Volver
                         </button>
                     </form>
+                  </div>
             </div>
           </div>
         </div>
@@ -756,7 +815,14 @@ $(".banderaEsp").click(function(){
             $("#tabInicio").html("Home");
             $("#tabSobreMi").html("About me");
             $("#tabContacto").html("Contact");
-    });
+            $("#descripcionPortfolio").html("Some of my most recent projects are on this page, created for personal use, and for friends, family and third parties. By clicking on each project you can see multiple screenshots, plus a brief description, the date in which the project was completed and how long it took, additional features, the tools and technology I used, and possible improvements for the future. There is a chance to visit every site, and to watch its code on the corresponding GitHub repository.");
+            $(".verMas").html("Watch this project");
+            $("#infoHDP").html("<p><i class='fas fa-calendar'></i> August 2021 <i class='fas fa-clock'></i> 1 month </p><p><i class='fas fa-list'></i> An online version of the popular game Hasta Donde Puedas/Cards Against Humanity. A black card is picked randomly and 10 white cards are dealt to each player. Taking turns, the players must choose the white card that they think completes the prompt from the black card the best. Afterwards, all players vote for the card they think was the funniest, and the winner gets a point. The first player to get to 5 points wins. </p><p><i class='fas fa-mouse-pointer'></i> <b>Controls:</b><ul><li>Drag and drop over the cards with the mouse, then at the vote click on the chosen card.</li><li>Numbers from 1 to 0 to pick the card with the respective index during the game, then numbers from 1 to the amount of players to pick the respective card during the vote. </li></ul></p><p><i class='fas fa-ellipsis-h'></i><b> Other features:</b> possibility to activate auto mode (plays and votes automatically in each round), shuffle cards up to 3 times per game, activate light or dark mode, change game options. </p><p><i class='fas fa-long-arrow-alt-right'></i><b> Project: </b> add rooms, improve the overall look of the game, allow different packs and extensions that come with the real game. </p><p><i class='fas fa-rocket'></i><b> Tools used on the project: </b> </p><h4> Node.js – Phaser 3 – Socket.IO – HTML5 – Express - Heroku </h4><form method='get' action='https://hdpjuego.herokuapp.com'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Go to page</button></form><form method='get' action='https://github.com/dariovillar1902/cah'><button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'><i class='fab fa-github'></i>Watch on GitHub</button></form>");
+            $("#info100Arg").html(" <p><i class='fas fa-calendar'></i> September 2021 <i class='fas fa-clock'></i> 1 week </p><p><i class='fas fa-list'></i> Copy of the digital screen that appears on the popular TV show 100 Argentinos Dicen/Family Feud. A question is asked and up to 8 answers are shown, in order from most popular to least popular. Two teams compete to see who can collect the most points by guessing the most right answers. They have up to 3 attempts (crosses) to get all the options. </p><p><i class='fas fa-mouse-pointer'></i> <b>Controls:</b><ul><li>Space bar: buzzer sound </li><li>Enter: reveals the question </li><li>1 to 8: reveals the answer with the respective number</li><li>Right arrow: go to the next question</li><li>Any other key: add a cross</li></ul></p><p><i class='fas fa-ellipsis-h'></i>At the end of the show, two of the contestants from the winning team face the Fast Money. In this round, 5 questions are asked, and the most popular answers to each question must be guessed by the players. One of the players answers first, they must answer in 20 seconds. Then, the other player answers in 25 seconds, but they cannot repeat any of the options which were already said by the other player. If on this round 200 points are reached, the game is won. </p><p><i class='fas fa-long-arrow-alt-right'></i><b> Project:</b> configure easily uploadable and editable questions and options, add the names of the two competing teams and the score of each team. </p><p><i class='fas fa-rocket'></i><b> Tools used on the project: </b> </p><h4> HTML5 – CSS3 – JavaScript – jQuery - SMTP </h4><form method='get' action='https://100argentinosdicen.vercel.app'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Go to page</button></form><form method='get' action='https://github.com/dariovillar1902/100argentinosdicen'><button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'><i class='fab fa-github'></i>Watch on GitHub</button></form>");
+            $("#infoDarioVillar").html("<p><i class='fas fa-calendar'></i> November 2021 <i class='fas fa-clock'></i> 3 days </p><p><i class='fas fa-list'></i> This website was created from scratch due to my requirement of having a place to show my web development projects. I used multiple visual tools and resources to create a nice page, with a simple design which shows my personal information in a clear, orderly and fun way. I learned how to use components from many different sources, such as tsParticles, progress bar elements, text gradients with CSS, automatic counters with JS and many Bootstrap components including Modals, Carrousels and Tooltips. This website is also 100% responsive, so it can be visited from different devices without any issues. </p><p><i class='fas fa-ellipsis-h'></i><b> Other features:</b> The page has 4 sections: a visually attractive Home, which invites visitors to continue browsing, an About Me section with personal information and stats about my performance, a Portfolio section where I showcase my projects and a Contact section where my Resume and Cover Letter can be downloaded, and comments and suggestions can be sent to me. </p><p><i class='fas fa-long-arrow-alt-right'></i><b> Project:</b> add light mode, english and spanish sections, keep improving the page to make it more visually attractive and expand my portfolio. </p><p><i class='fas fa-rocket'></i><b> Tools used on the project: </b> </p><h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4><form method='get' action='home.html'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Go to Home</button></form><form method='get' action='https://github.com/dariovillar1902/dariovillar'><button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'><i class='fab fa-github'></i>Watch on GitHub</button></form>");
+            $("#infoQWQ").html("<p><i class='fas fa-calendar'></i> 2018 - 2019 <i class='fas fa-clock'></i> 1 month </p><p><i class='fas fa-list'></i> This website was created for the ophtalmology company QWQ Latino América LLC. It is a basic page with information about the ophtalmology products HD Analyzer and Tear Film Analyzer, and their respective brochures and characteristics. It also has a Contact section with a form which sends comments directly to the people in charge of customer service for the company. </p><p><i class='fas fa-ellipsis-h'></i><b> Other features:</b> The site is 100% responsive, it can be seen without issues through mobile devices.</p><p> Unfortunately, the hosting for this website was discontinued, so it is not posible to visit it. What is in the photos is all the information I was able to recollect about the page. However, it was the first project of mine in which I had contact with a client, and I made sure to hear and acknowledge their requests in order to have an attractive and informative page. </p><p><i class='fas fa-rocket'></i><b> Tools I used in the project: </b> </p><h4> HTML5 - CSS3 - Bootstrap - JavaScript - PHP </h4><form method='get' action='contacto.html'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Go Back</button></form>");
+            $("#infoSyzygy").html("<p><i class='fas fa-calendar'></i> October 2017 <i class='fas fa-clock'></i> 1 month </p><p><i class='fas fa-list'></i> This website was created for a project from the Marketing subject at my high school. It is a fairly basic website since at that moment I only knew HTML, CSS and JavaScript on a basic level. The website was 100% responsive through Bootstrap, so it could be seen from any device. </p><p><i class='fas fa-ellipsis-h'></i><b> Other features:</b> In my group consisting of 2 people, my partner handled the logo design in different hues and color schemes, which were visible in the Home section, and I coded the entirety of the website. We took into account every suggestion from the teacher, treating them as observations from a client and asking for all the information needed to improve the site.</p><p> Unfortunately, the hosting for this website was discontinued, so it is not posible to visit it. What is in the photos is all the information I was able to recollect about the page. However, it was my first proyect and I learned a lot.</p><p><i class='fas fa-rocket'></i><b> Tools I used for the project: </b> </p><h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4><form method='get' action='contacto.html'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Go Back</button></form>");
+          });
 
     $(".banderaEng").click(function(){
             $(".banderaEng").css("display", "none");
@@ -765,7 +831,14 @@ $(".banderaEsp").click(function(){
             $("#tabInicio").html("Inicio");
             $("#tabSobreMi").html("Sobre mi");
             $("#tabContacto").html("Contacto");
-    });
+            $("#descripcionPortfolio").html("En esta página se encuentran algunos de mis proyectos más recientes, realizados tanto a título personal como para familia y amigos, y para terceros. Al hacer click en cada proyecto se pueden observar múltiples capturas de pantalla acompañadas de una breve descripción, la fecha en la que fue realizado y su duración, funciones o controles adicionales, las tecnologías utilizadas, y posibles mejoras para el futuro. Hay posibilidad de visitar cada página, y de ver su código en el repositorio correspondiente de GitHub.");
+            $(".verMas").html("Ver proyecto");
+            $("#infoHDP").html("<p><i class='fas fa-calendar'></i> agosto de 2021 <i class='fas fa-clock'></i> 1 mes </p><p><i class='fas fa-list'></i> Recreación del popular juego Hasta Donde Puedas/Cards Against Humanity en versión online. Se elige una carta negra al azar y luego se reparten 10 cartas blancas a cada jugador. Por turnos, los jugadores deben elegir la carta blanca que crean que mejor completa a la carta negra. Luego, todos los jugadores votan por la carta que les parece más graciosa, y le otorgan un punto. El primer jugador que llega a 5 puntos gana el juego. </p><p><i class='fas fa-mouse-pointer'></i> <b>Controles:</b><ul><li>Drag and drop sobre las cartas con el mouse, luego en la votación hacer click sobre la carta elegida</li><li>Números del 1 al 0 para elegir la carta en la posición correspondiente durante el juego, luego números del 1 a la cantidad de jugadores para elegir la carta en la votación.</li></ul></p><p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> posibilidad de activar modo automático (juega y vota automáticamente en cada ronda), mezclar todas las cartas hasta 3 veces en una partida, activar modo claro u oscuro, cambiar opciones de juego.</p><p><i class='fas fa-long-arrow-alt-right'></i><b> Proyecto:</b> agregar salas, mejorar el estilo general del juego, permitir la inclusión de los distintos packs y extensiones que trae el juego real. </p><p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p><h4> Node.js – Phaser 3 – Socket.IO – HTML5 – Express - Heroku </h4><form method='get' action='https://hdpjuego.herokuapp.com'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Ir a la página</button></form><form method='get' action='https://github.com/dariovillar1902/cah'><button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'><i class='fab fa-github'></i>Ver en GitHub</button></form>");
+            $("#info100Arg").html(" <p><i class='fas fa-calendar'></i> septiembre de 2021 <i class='fas fa-clock'></i> 1 semana </p><p><i class='fas fa-list'></i> Recreación de la pantalla digital del popular programa 100 Argentinos Dicen/Family Feud. Se realiza una pregunta y se muestran hasta 8 respuestas principales, en orden de más popular a menos popular. Dos equipos compiten por ver quién puede acumular la mayor cantidad de puntos producto de adivinar la mayor cantidad de opciones posibles. Tienen hasta 3 intentos (cruces) para conseguir todas las opciones. </p><p><i class='fas fa-mouse-pointer'></i> <b>Controles:</b><ul><li>Barra espaciadora: sonido de pulsador</li><li>Enter: revela la pregunta</li><li>1 a 8: revela la opción con el número correspondiente</li><li>Flecha derecha: pasa a la siguiente pregunta</li><li>Cualquier otra tecla: agrega una cruz</li></ul></p><p><i class='fas fa-ellipsis-h'></i>Al final del programa, dos de los participantes del equipo ganador se someten al dinero rápido. En esta ronda, se hacen 5 preguntas de las cuales se deben adivinar las opciones más populares. Uno de los jugadores responde primero, debe responder en 20 segundos. Luego, responde el otro jugador en 25 segundos, pero no puede repetir ninguna de las opciones que ya dijo el jugador anterior. Si en esta ronda se consiguen 200 puntos, se gana el juego.</p><p><i class='fas fa-long-arrow-alt-right'></i><b> Proyecto:</b> configurar preguntas con sus opciones que se puedan subir y editar fácilmente, y agregar los nombres de los dos equipos que juegan con la puntuación parcial de cada equipo. </p><p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p><h4> HTML5 – CSS3 – JavaScript – jQuery - SMTP </h4><form method='get' action='https://100argentinosdicen.vercel.app'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Ir a la página</button></form><form method='get' action='https://github.com/dariovillar1902/100argentinosdicen'><button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'><i class='fab fa-github'></i>Ver en GitHub</button></form>");
+            $("#infoDarioVillar").html("<p><i class='fas fa-calendar'></i> noviembre de 2021 <i class='fas fa-clock'></i> 3 días </p><p><i class='fas fa-list'></i> Esta misma página fue creada desde cero debido a la necesidad de tener un lugar donde mostrar mis proyectos de desarrollo web. Hice uso de múltiples recursos visuales y herramientas de diseño para hacer una página agradable, con un maquetado simple que permita ver mi información personal de forma clara, ordenada y divertida. Aprendí a usar componentes de muchas fuentes distintas, tales como tsParticles, elementos para barras de progreso, gradientes de texto con CSS, contadores automáticos con JS y varios componentes de Bootstrap como Modals, Carruseles y Tooltips. Además, esta página es 100% responsive, por lo que puede ser visualizada desde dispositivos de cualquier tamaño sin ningún problema.  </p><p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> La página tiene 4 secciones: un Inicio atractivo visualmente que invita a quien entre a la página a continuar navegando, una sección Sobre Mi con información personal y estadísticas sobre mi desempeño, una sección de Portfolio en donde muestro mis proyectos y una sección de Contacto en donde se puede descargar mi CV y carta de presentación, así como enviarme comentarios o sugerencias.</p><p><i class='fas fa-long-arrow-alt-right'></i><b> Proyecto:</b> implementar modo claro, páginas en español e inglés, seguir mejorando la página para que sea más atractiva visualmente y ampliar mi portfolio </p><p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p><h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4><form method='get' action='home.html'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Ir al inicio</button></form><form method='get' action='https://github.com/dariovillar1902/dariovillar'><button class='w-100 py-2 mb-2 btn btn-outline-secondary rounded-4' type='submit'><i class='fab fa-github'></i>Ver en GitHub</button></form>");
+            $("#infoQWQ").html("<p><i class='fas fa-calendar'></i> 2018 - 2019 <i class='fas fa-clock'></i> 1 mes </p><p><i class='fas fa-list'></i> Esta página fue creada para la empresa de Oftalmología QWQ Latino América LLC. Es una página básica con información sobre los productos de oftalmología HD Analyzer y Tear Film Analyzer, sus folletos y características correspondientes. También tiene una sección de contacto con un formulario que envía un mensaje directamente a los responsables de atención al cliente de la compañía. </p><p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> La página es 100% responsive, puede verse desde dispositivos móviles sin problemas.</p><p> Lamentablemente, el hosting de esta página fue descontinuado, por lo que no es posible visitarla. Lo que se ve en las fotos es toda la información que fue posible rescatar. Sin embargo, fue el primer proyecto en el que tuve contacto con clientes, y me aseguré de escuchar e interpretar sus pedidos para obtener una página atractiva e informativa.</p><p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p><h4> HTML5 - CSS3 - Bootstrap - JavaScript - PHP </h4><form method='get' action='contacto.html'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Volver</button></form>");
+            $("#infoSyzygy").html("<p><i class='fas fa-calendar'></i> octubre de 2017 <i class='fas fa-clock'></i> 1 mes </p><p><i class='fas fa-list'></i> Esta página fue creada para un trabajo práctico de la materia Comercialización, en 4° año de mi colegio secundario. Es una página bastante básica debido a que en ese momento sólo sabía HTML, CSS y JavaScript básico. La página era 100% responsive a través de Bootstrap, por lo que podía ser vista desde cualquier dispositivo.  </p><p><i class='fas fa-ellipsis-h'></i><b> Otras funciones:</b> En mi grupo de trabajo de 2 personas, mi compañero se encargó de la confección del logo en distintas variantes (visible en la página de inicio) y yo realicé enteramente el desarrollo de esta página. Tomamos en cuenta todas las correcciones del profesor, aplicándolas como si fuera un cliente y preguntando todo lo que fuera necesario para mejorar nuestra página.</p><p> Lamentablemente, el hosting de esta página fue descontinuado, por lo que no es posible visitarla. Lo que se ve en las fotos es toda la información que fue posible rescatar. Sin embargo, fue mi primer proyecto y aprendí mucho.</p><p><i class='fas fa-rocket'></i><b> Tecnologías utilizadas: </b> </p><h4> HTML5 - CSS3 - Bootstrap - JavaScript - jQuery </h4><form method='get' action='contacto.html'><button class='w-100 py-2 mb-2 btn btn-outline-primary rounded-4' type='submit'><i class='fas fa-wifi'></i>Volver</button></form>");
+          });
 
       if (modoOscuro){
         $(".textoClaro").css("color", "#FBFBFF !important");

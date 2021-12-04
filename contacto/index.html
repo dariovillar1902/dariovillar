@@ -414,25 +414,25 @@ input[type="checkbox"] {
         <div class='row'>
           <div class='col-md-1'></div>
           <div class='col-md-10'>
-            <h1> Contacto </h1>
+            <h1 id="tituloContacto"> Contacto </h1>
           </div>
           <div class='col-md-1'></div>
         </div>
         <div class='row' id='filaArchivos'>
             <div class='col-md-1'></div>
             <div class='col-md-5 divArchivo'>
-                <h4 class="textoClaro"> Curriculum Vitae </h4>
+                <h4 class="textoClaro" id='tituloCV'> Curriculum Vitae </h4>
                 <iframe src='cv.pdf'> </iframe>
-                <button class="verMas"><a href="cv.html" class='verMasLink'> Vista Previa </a></button>
+                <button class="verMas"><a href="cv.html" class='verMasLink botonVistaPrevia' id="vistaPreviaCV"> Vista Previa </a></button>
                 <br>
-                <button class="verMas"><a href="cv.pdf" class='verMasLink' download> Descargar </a></button>
+                <button class="verMas"><a href="cv.pdf" class='verMasLink botonDescargar' id="descargarCV" download> Descargar </a></button>
               </div>
             <div class='col-md-5 divArchivo'>
-              <h4 class="textoClaro"> Carta de presentación </h4>
+              <h4 class="textoClaro" id="tituloCarta"> Carta de presentación </h4>
               <iframe src='coverletter.pdf'> </iframe>
-              <button class="verMas"><a href="coverletter.html" class='verMasLink'> Vista Previa </a></button>
+              <button class="verMas"><a href="coverletter.html" class='verMasLink botonVistaPrevia'> Vista Previa </a></button>
               <br>
-              <button class="verMas"><a href="coverletter.pdf" class='verMasLink' download> Descargar </a></button>
+              <button class="verMas"><a href="coverletter.pdf" class='verMasLink botonDescargar' download> Descargar </a></button>
             </div>
             <div class='col-md-1'></div>
         </div>
@@ -441,26 +441,26 @@ input[type="checkbox"] {
             <div class='col-md-10 container-fluid'>
             <form action="https://formsubmit.co/1baa31af5cc41afbd1db00ea820f4407" method="POST">
               <input type="hidden" name="_next" value="https://dariovillar.vercel.app/gracias.html">
-              <h1 class="h3 mb-3 fw-normal"> Enviar un mensaje </h1>
+              <h1 class="h3 mb-3 fw-normal" id="tituloMensaje"> Enviar un mensaje </h1>
               <div class='row'>
                 <div class='col-md-3 mx-auto'>
                   <div class="form-floating">
                     <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name='Nombre'>
-                    <label for="floatingInput">Nombre</label>
+                    <label for="floatingInput" id="labelNombre">Nombre</label>
                   </div>
                 </div>
                 <div class='col-md-1'></div>
                 <div class='col-md-3 mx-auto'>
                   <div class="form-floating">
                     <input type="text" class="form-control" id="floatingInput2" placeholder="Asunto" name='Asunto'>
-                    <label for="floatingInput2">Asunto</label>
+                    <label for="floatingInput2" id="labelAsunto">Asunto</label>
                   </div>
                 </div>
                 <div class='col-md-1'></div>
                 <div class='col-md-3 mx-auto'>
                   <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput3" placeholder="Mail" name='Mail'>
-                    <label for="floatingInput3">Mail</label>
+                    <label for="floatingInput3" id="labelMail">Correo electrónico</label>
                   </div>
                 </div>
               </div>
@@ -468,7 +468,7 @@ input[type="checkbox"] {
                 <div class='col-md-10 mx-auto'>
                   <div class="form-floating">
                     <textarea class="form-control" id="floatingInput4" placeholder="Mensaje" name='Mensaje'></textarea>
-                    <label for="floatingInput4">Mensaje</label>
+                    <label for="floatingInput4" id="labelMensaje">Mensaje</label>
                   </div>
                 </div>
                 <div class='row' id='filaEnvio'>
@@ -500,6 +500,19 @@ $(".banderaEsp").click(function(){
             $("#tabInicio").html("Home");
             $("#tabSobreMi").html("About me");
             $("#tabContacto").html("Contact");
+            $("#tituloContacto").html("Contact");
+            $("#tituloCV").html("Resume");
+            $("#tituloCarta").html("Cover Letter");
+            $("#tituloMensaje").html("Send a message");
+            $(".botonVistaPrevia").html("Preview");
+            $(".botonDescargar").html("Download");
+            $("#labelNombre").html("Name");
+            $("#labelAsunto").html("Subject");
+            $("#labelMail").html("Email address");
+            $("#labelMensaje").html("Message");
+            $("#botonMail").html("Send");
+            $("#vistaPreviaCV").attr("href", "cveng.html");
+            $("#descargarCV").attr("href", "cveng.pdf");
     });
 
     $(".banderaEng").click(function(){
@@ -509,6 +522,18 @@ $(".banderaEsp").click(function(){
             $("#tabInicio").html("Inicio");
             $("#tabSobreMi").html("Sobre mi");
             $("#tabContacto").html("Contacto");
+            $("#tituloContacto").html("Contacto");
+            $("#tituloCV").html("Currículum Vitae");
+            $("#tituloCarta").html("Carta de presentación");
+            $("#tituloMensaje").html("Enviar un mensaje");
+            $(".botonVistaPrevia").html("Vista previa");
+            $(".botonDescargar").html("Descargar");
+            $("#labelNombre").html("Nombre");
+            $("#labelAsunto").html("Asunto");
+            $("#labelMail").html("Correo electrónico");
+            $("#labelMensaje").html("Mensaje");
+            $("#botonMail").html("Enviar");
+            $("#vistaPreviaCV").attr("href", "cv.html");
     });
 
 if (modoOscuro){
